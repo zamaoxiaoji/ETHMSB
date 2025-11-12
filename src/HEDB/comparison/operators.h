@@ -11,6 +11,8 @@ namespace HEDB
     // c0 + c1 - 1/8
     void HomAND(TLWELvl1 &res, const TLWELvl1 &ca, const TLWELvl1 &cb, const TFHEEvalKey &ek, bool result_type);
 
+    void my_HomAND(TLWELvl1 &res, const TLWELvl1 &ca, const TLWELvl1 &cb, TLWELvl1 &c_2, const TFHEEvalKey &ek, bool result_type, uint32_t k);
+
     void HomOR(TLWELvl1 &res, const TLWELvl1 &ca, const TLWELvl1 &cb, const TFHEEvalKey &ek, bool result_type);
 
     // The output of Not gate is logic type

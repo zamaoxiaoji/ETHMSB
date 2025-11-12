@@ -1,0 +1,74 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"thirdparty/SEAL/native/src/seal/util/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 32,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "include/SEAL-4.0/seal/util",
+			"paths" : 
+			[
+				"thirdparty/SEAL/native/src/seal/util/blake2.h",
+				"thirdparty/SEAL/native/src/seal/util/blake2-impl.h",
+				"thirdparty/SEAL/native/src/seal/util/clang.h",
+				"thirdparty/SEAL/native/src/seal/util/clipnormal.h",
+				"thirdparty/SEAL/native/src/seal/util/common.h",
+				"thirdparty/SEAL/native/src/seal/util/croots.h",
+				"thirdparty/SEAL/native/src/seal/util/defines.h",
+				"thirdparty/SEAL/native/src/seal/util/dwthandler.h",
+				"thirdparty/SEAL/native/src/seal/util/fips202.h",
+				"thirdparty/SEAL/native/src/seal/util/galois.h",
+				"thirdparty/SEAL/native/src/seal/util/gcc.h",
+				"thirdparty/SEAL/native/src/seal/util/globals.h",
+				"thirdparty/SEAL/native/src/seal/util/hash.h",
+				"thirdparty/SEAL/native/src/seal/util/hestdparms.h",
+				"thirdparty/SEAL/native/src/seal/util/iterator.h",
+				"thirdparty/SEAL/native/src/seal/util/locks.h",
+				"thirdparty/SEAL/native/src/seal/util/mempool.h",
+				"thirdparty/SEAL/native/src/seal/util/msvc.h",
+				"thirdparty/SEAL/native/src/seal/util/numth.h",
+				"thirdparty/SEAL/native/src/seal/util/pointer.h",
+				"thirdparty/SEAL/native/src/seal/util/polyarithsmallmod.h",
+				"thirdparty/SEAL/native/src/seal/util/polycore.h",
+				"thirdparty/SEAL/native/src/seal/util/rlwe.h",
+				"thirdparty/SEAL/native/src/seal/util/rns.h",
+				"thirdparty/SEAL/native/src/seal/util/scalingvariant.h",
+				"thirdparty/SEAL/native/src/seal/util/ntt.h",
+				"thirdparty/SEAL/native/src/seal/util/streambuf.h",
+				"thirdparty/SEAL/native/src/seal/util/uintarith.h",
+				"thirdparty/SEAL/native/src/seal/util/uintarithmod.h",
+				"thirdparty/SEAL/native/src/seal/util/uintarithsmallmod.h",
+				"thirdparty/SEAL/native/src/seal/util/uintcore.h",
+				"thirdparty/SEAL/native/src/seal/util/ztools.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "thirdparty/SEAL/native/src/seal/util",
+		"source" : "thirdparty/SEAL/native/src/seal/util"
+	}
+}

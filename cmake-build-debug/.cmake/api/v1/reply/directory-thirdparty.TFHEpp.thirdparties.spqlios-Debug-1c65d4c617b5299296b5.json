@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "thirdparty/TFHEpp/thirdparties/spqlios",
+		"source" : "thirdparty/TFHEpp/thirdparties/spqlios"
+	}
+}

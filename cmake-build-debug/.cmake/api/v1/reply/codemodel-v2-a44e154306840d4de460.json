@@ -1,0 +1,755 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						8,
+						15
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "src/HEDB/comparison",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.HEDB.comparison-Debug-712ca95a62f16d7e2c60.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/HEDB/comparison"
+				},
+				{
+					"build" : "src/HEDB/conversion",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.HEDB.conversion-Debug-6c150fd95d97bef4e108.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/HEDB/conversion"
+				},
+				{
+					"build" : "src/HEDB/utils",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.HEDB.utils-Debug-eaa98492534abb3bcfc2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/HEDB/utils"
+				},
+				{
+					"build" : "thirdparty/TFHEpp",
+					"childIndexes" : 
+					[
+						5,
+						6,
+						7
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.TFHEpp-Debug-8734952cc3ca83363b66.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "thirdparty/TFHEpp"
+				},
+				{
+					"build" : "thirdparty/TFHEpp/thirdparties/spqlios",
+					"jsonFile" : "directory-thirdparty.TFHEpp.thirdparties.spqlios-Debug-1c65d4c617b5299296b5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 1,
+					"source" : "thirdparty/TFHEpp/thirdparties/spqlios",
+					"targetIndexes" : 
+					[
+						24
+					]
+				},
+				{
+					"build" : "thirdparty/TFHEpp/thirdparties/randen",
+					"jsonFile" : "directory-thirdparty.TFHEpp.thirdparties.randen-Debug-01d7132f0c7321a7792b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 1,
+					"source" : "thirdparty/TFHEpp/thirdparties/randen",
+					"targetIndexes" : 
+					[
+						22
+					]
+				},
+				{
+					"build" : "thirdparty/TFHEpp/src",
+					"jsonFile" : "directory-thirdparty.TFHEpp.src-Debug-307bab331d4bd50e80df.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 1,
+					"source" : "thirdparty/TFHEpp/src",
+					"targetIndexes" : 
+					[
+						25
+					]
+				},
+				{
+					"build" : "thirdparty/SEAL",
+					"childIndexes" : 
+					[
+						9,
+						10,
+						11,
+						13
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SEAL-Debug-5700326aa15882c8ee54.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "thirdparty/SEAL",
+					"targetIndexes" : 
+					[
+						23
+					]
+				},
+				{
+					"build" : "thirdparty/SEAL/thirdparty/msgsl-build",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SEAL.thirdparty.msgsl-build-Debug-cab07bab20ba6e4d9f76.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1.3"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 3,
+					"source" : "cmake-build-debug/thirdparty/SEAL/thirdparty/msgsl-src"
+				},
+				{
+					"build" : "thirdparty/SEAL/thirdparty/zlib-build",
+					"jsonFile" : "directory-thirdparty.SEAL.thirdparty.zlib-build-Debug-5f8a2c6d44b3e7f9bb58.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.4.4"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 4,
+					"source" : "cmake-build-debug/thirdparty/SEAL/thirdparty/zlib-src",
+					"targetIndexes" : 
+					[
+						12,
+						13,
+						17,
+						18,
+						41,
+						42
+					]
+				},
+				{
+					"build" : "thirdparty/SEAL/thirdparty/zstd-build",
+					"childIndexes" : 
+					[
+						12
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SEAL.thirdparty.zstd-build-Debug-a356313d659c0935d13e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.9"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 5,
+					"source" : "cmake-build-debug/thirdparty/SEAL/thirdparty/zstd-src/build/cmake",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "thirdparty/SEAL/thirdparty/zstd-build/lib",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SEAL.thirdparty.zstd-build.lib-Debug-72efe505c4f7119555f7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.9"
+					},
+					"parentIndex" : 11,
+					"projectIndex" : 6,
+					"source" : "cmake-build-debug/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib",
+					"targetIndexes" : 
+					[
+						14,
+						15,
+						40
+					]
+				},
+				{
+					"build" : "thirdparty/SEAL/native/src/seal",
+					"childIndexes" : 
+					[
+						14
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SEAL.native.src.seal-Debug-6cc3cc33b9784e1b59c5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 2,
+					"source" : "thirdparty/SEAL/native/src/seal"
+				},
+				{
+					"build" : "thirdparty/SEAL/native/src/seal/util",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SEAL.native.src.seal.util-Debug-8fe96047bf04c1bb09d0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 13,
+					"projectIndex" : 2,
+					"source" : "thirdparty/SEAL/native/src/seal/util"
+				},
+				{
+					"build" : "test",
+					"jsonFile" : "directory-test-Debug-451c0598f41488bb20b9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "test",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						16,
+						19,
+						20,
+						21,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						15
+					],
+					"name" : "HEDB",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						16,
+						19,
+						20,
+						21,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4,
+						5,
+						6,
+						7
+					],
+					"name" : "tfhe++",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						22,
+						24,
+						25
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						8,
+						13,
+						14
+					],
+					"name" : "SEAL",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						23
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "GSL",
+					"parentIndex" : 2
+				},
+				{
+					"directoryIndexes" : 
+					[
+						10
+					],
+					"name" : "zlib",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						12,
+						13,
+						17,
+						18,
+						41,
+						42
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						6
+					],
+					"directoryIndexes" : 
+					[
+						11
+					],
+					"name" : "zstd",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						12
+					],
+					"name" : "libzstd",
+					"parentIndex" : 5,
+					"targetIndexes" : 
+					[
+						14,
+						15,
+						40
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "HEDB::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HEDB-Debug-371f4cde7a7452a07088.json",
+					"name" : "HEDB",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "add_replace_and_test::@36f028580bb02cc8272a",
+					"jsonFile" : "target-add_replace_and_test-Debug-368c34c4c803d85a711e.json",
+					"name" : "add_replace_and_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "add_test::@36f028580bb02cc8272a",
+					"jsonFile" : "target-add_test-Debug-40c3d09230b32b732869.json",
+					"name" : "add_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "add_test_copy::@36f028580bb02cc8272a",
+					"jsonFile" : "target-add_test_copy-Debug-21bdfbf7c6bad11296a6.json",
+					"name" : "add_test_copy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "clean-all::@099cd49d3ace63583cde",
+					"jsonFile" : "target-clean-all-Debug-3a9cea465cdda2b8721b.json",
+					"name" : "clean-all",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "com_test::@36f028580bb02cc8272a",
+					"jsonFile" : "target-com_test-Debug-e8ebf7a40599ce4106be.json",
+					"name" : "com_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "comparison_test::@36f028580bb02cc8272a",
+					"jsonFile" : "target-comparison_test-Debug-8703f57738f9eb204a3f.json",
+					"name" : "comparison_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "comparison_test_copy::@36f028580bb02cc8272a",
+					"jsonFile" : "target-comparison_test_copy-Debug-d40be1cabd8ea688e859.json",
+					"name" : "comparison_test_copy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "conversion_test::@36f028580bb02cc8272a",
+					"jsonFile" : "target-conversion_test-Debug-d5caaa71400644dbb672.json",
+					"name" : "conversion_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "distinct_test::@36f028580bb02cc8272a",
+					"jsonFile" : "target-distinct_test-Debug-124f3b03c755ccfaf7a6.json",
+					"name" : "distinct_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "distinct_test_v2::@36f028580bb02cc8272a",
+					"jsonFile" : "target-distinct_test_v2-Debug-b57fca94ce39b79161b9.json",
+					"name" : "distinct_test_v2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "distinct_test_v3::@36f028580bb02cc8272a",
+					"jsonFile" : "target-distinct_test_v3-Debug-a784ae779ff4a6b93293.json",
+					"name" : "distinct_test_v3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "example::@32d2ed500fad14e2689c",
+					"jsonFile" : "target-example-Debug-5b30f85cd1cc62d31f85.json",
+					"name" : "example",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "example64::@32d2ed500fad14e2689c",
+					"jsonFile" : "target-example64-Debug-45722d93547e0d11aa39.json",
+					"name" : "example64",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "libzstd.pc::@cde12ca4d75a524973b8",
+					"jsonFile" : "target-libzstd.pc-Debug-777bf151736ede9175e4.json",
+					"name" : "libzstd.pc",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "libzstd_static::@cde12ca4d75a524973b8",
+					"jsonFile" : "target-libzstd_static-Debug-5f909650aaf44568c7e5.json",
+					"name" : "libzstd_static",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "lwe_mul::@36f028580bb02cc8272a",
+					"jsonFile" : "target-lwe_mul-Debug-9d041bde31b067508c62.json",
+					"name" : "lwe_mul",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "minigzip::@32d2ed500fad14e2689c",
+					"jsonFile" : "target-minigzip-Debug-c57d01ef87ecf01c8bd4.json",
+					"name" : "minigzip",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "minigzip64::@32d2ed500fad14e2689c",
+					"jsonFile" : "target-minigzip64-Debug-f21ff6e383f44cc1210b.json",
+					"name" : "minigzip64",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "nested_cmux_from_cb::@36f028580bb02cc8272a",
+					"jsonFile" : "target-nested_cmux_from_cb-Debug-b45b1f8aa39eed0a0de4.json",
+					"name" : "nested_cmux_from_cb",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "new_test::@36f028580bb02cc8272a",
+					"jsonFile" : "target-new_test-Debug-0bd48d4ca4f2a0408eac.json",
+					"name" : "new_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "new_test2::@36f028580bb02cc8272a",
+					"jsonFile" : "target-new_test2-Debug-c1ce88ed3caa2538050b.json",
+					"name" : "new_test2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "randen::@6f599246a9f0f4299bc9",
+					"jsonFile" : "target-randen-Debug-8e32cf05a22f162bb5aa.json",
+					"name" : "randen",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "seal::@04c88f895e774f020d65",
+					"jsonFile" : "target-seal-Debug-e4fc22311a2e242c9775.json",
+					"name" : "seal",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "spqlios::@4776ed86303d546cd998",
+					"jsonFile" : "target-spqlios-Debug-a840181b1cfaebcad894.json",
+					"name" : "spqlios",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "tfhe++::@0c60da544c38484cb9e3",
+					"jsonFile" : "target-tfhe++-Debug-791636ebc6ba5c87141d.json",
+					"name" : "tfhe++",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "tpch_q14::@36f028580bb02cc8272a",
+					"jsonFile" : "target-tpch_q14-Debug-a32c160609a4ab8406c8.json",
+					"name" : "tpch_q14",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "tpch_q14_v0::@36f028580bb02cc8272a",
+					"jsonFile" : "target-tpch_q14_v0-Debug-10788bd0a12dba34b802.json",
+					"name" : "tpch_q14_v0",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "tpch_q14_v0_copy::@36f028580bb02cc8272a",
+					"jsonFile" : "target-tpch_q14_v0_copy-Debug-c6f8bccabdf115ae0f45.json",
+					"name" : "tpch_q14_v0_copy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "tpch_q14_v1::@36f028580bb02cc8272a",
+					"jsonFile" : "target-tpch_q14_v1-Debug-7fbc9339620267350a6a.json",
+					"name" : "tpch_q14_v1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "tpch_q19::@36f028580bb02cc8272a",
+					"jsonFile" : "target-tpch_q19-Debug-31856af15ffccd9e77ab.json",
+					"name" : "tpch_q19",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "tpch_q19_v1::@36f028580bb02cc8272a",
+					"jsonFile" : "target-tpch_q19_v1-Debug-97d56fb2368b79e626f3.json",
+					"name" : "tpch_q19_v1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "tpch_q6::@36f028580bb02cc8272a",
+					"jsonFile" : "target-tpch_q6-Debug-fc5a5a77ef1eb9d9496d.json",
+					"name" : "tpch_q6",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "tpch_q6_copy::@36f028580bb02cc8272a",
+					"jsonFile" : "target-tpch_q6_copy-Debug-09240e5f5c6f08e4429a.json",
+					"name" : "tpch_q6_copy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "tpch_q6_mytest1::@36f028580bb02cc8272a",
+					"jsonFile" : "target-tpch_q6_mytest1-Debug-eb41734dab5c651d0699.json",
+					"name" : "tpch_q6_mytest1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "tpch_q6_mytest_v1::@36f028580bb02cc8272a",
+					"jsonFile" : "target-tpch_q6_mytest_v1-Debug-2198525732fd24266670.json",
+					"name" : "tpch_q6_mytest_v1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "tpch_q6_mytest_v2::@36f028580bb02cc8272a",
+					"jsonFile" : "target-tpch_q6_mytest_v2-Debug-b7e07c735687b30382a8.json",
+					"name" : "tpch_q6_mytest_v2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "tpch_q6_mytest_v3::@36f028580bb02cc8272a",
+					"jsonFile" : "target-tpch_q6_mytest_v3-Debug-e3c1f6dc529efbd91303.json",
+					"name" : "tpch_q6_mytest_v3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "tpch_q6_mytest_v4::@36f028580bb02cc8272a",
+					"jsonFile" : "target-tpch_q6_mytest_v4-Debug-eef777ad39a8d8614cbb.json",
+					"name" : "tpch_q6_mytest_v4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "tpch_q6_mytest_v5::@36f028580bb02cc8272a",
+					"jsonFile" : "target-tpch_q6_mytest_v5-Debug-e2972e3d8152e9d25cfe.json",
+					"name" : "tpch_q6_mytest_v5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "uninstall::@cde12ca4d75a524973b8",
+					"jsonFile" : "target-uninstall-Debug-5337006803f2bc6960b8.json",
+					"name" : "uninstall",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "zlib::@32d2ed500fad14e2689c",
+					"jsonFile" : "target-zlib-Debug-0de11d3c30d6f9237ed8.json",
+					"name" : "zlib",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "zlibstatic::@32d2ed500fad14e2689c",
+					"jsonFile" : "target-zlibstatic-Debug-203cc58e2081148c98d8.json",
+					"name" : "zlibstatic",
+					"projectIndex" : 4
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/tl/HE3DB/cmake-build-debug",
+		"source" : "/home/tl/HE3DB"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

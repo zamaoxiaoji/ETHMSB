@@ -3,6 +3,8 @@
 #include <limits>
 #include <trgsw.hpp>
 
+#include <iostream>
+#include<bitset>
 #include "utils.hpp"
 
 namespace TFHEpp {
@@ -33,6 +35,11 @@ void IdentityKeySwitch(TLWE<typename P::targetP> &res,
     else if constexpr (domain_digit < target_digit)
         res[P::targetP::k * P::targetP::n] = tlwe[P::domainP::k * P::domainP::n]
                                              << (target_digit - domain_digit);
+                                             
+    //////////////////////////////////////////////////////////////////////////
+    uint64_t temp = 0;
+    uint32_t t2= res[P::targetP::k * P::targetP::n];
+    //////////////////////////////
     for (int i = 0; i < P::domainP::k * P::domainP::n; i++) {
         const typename P::domainP::T aibar = tlwe[i] + prec_offset;
         for (int j = 0; j < P::t; j++) {
@@ -40,11 +47,26 @@ void IdentityKeySwitch(TLWE<typename P::targetP> &res,
                 (aibar >> (numeric_limits<typename P::domainP::T>::digits -
                            (j + 1) * P::basebit)) &
                 mask;
-            if (aij != 0)
-                for (int k = 0; k <= P::targetP::k * P::targetP::n; k++)
+            if (aij != 0){
+                for (int k = 0; k <= P::targetP::k * P::targetP::n; k++){
                     res[k] -= ksk[i][j][aij - 1][k];
+                    
+                    ///////////////////////////////////////////////
+                    if(k == P::targetP::k * P::targetP::n){
+                        temp += ksk[i][j][aij - 1][k];
+                    }
+                    //////////////////////////////////////////////
+                    
+                }
+            }
         }
     }
+    // std::cout << "-------------in key_switching---------------" << std::endl;
+    // std::cout << "32_res        :" << bitset<32>(t2) << std::endl;
+    // std::cout << "temp          :" << bitset<64>(temp) << std::endl;
+    // std::cout << "32_res - temp :" << bitset<32>(t2 - temp) << std::endl;
+    // std::cout << "64_res        :" << bitset<64>((uint64_t)t2) << std::endl;
+    // std::cout << "64_res - temp :" << bitset<64>((uint64_t)t2 - temp) << std::endl;
 }
 #define INST(P)                                                               \
     template void IdentityKeySwitch<P>(TLWE<typename P::targetP> & res,       \

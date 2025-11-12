@@ -1,8 +1,8 @@
 #include <iostream>
 #include <chrono>
 #include <random>
-#include "HEDB/comparison/comparison.h"
-#include "HEDB/utils/utils.h"
+#include "src/HEDB/comparison/comparison.h"
+#include "src/HEDB/utils/utils.h"
 
 using namespace HEDB;
 
@@ -153,6 +153,7 @@ void tlwelvl2_comparison_test(uint32_t plain_bits, int num_test)
         c0 = TFHEpp::tlweSymInt32Encrypt<P>(p0, P::α, pow(2., scale_bits), sk.key.get<P>());
         c1 = TFHEpp::tlweSymInt32Encrypt<P>(p1, P::α, pow(2., scale_bits), sk.key.get<P>());
 
+
         //Greater than
         start = std::chrono::system_clock::now();
         greater_than<P>(c0, c1, cres, plain_bits, ek, result_type);
@@ -210,9 +211,8 @@ void tlwelvl2_comparison_test(uint32_t plain_bits, int num_test)
 
 int main()
 {
-    int num_test = 100;
-    tlwelvl1_comparison_test(4, num_test);
-    tlwelvl2_comparison_test(16, num_test);
-    tlwelvl2_comparison_test(32, num_test);
+    int num_test = 10;
+    tlwelvl1_comparison_test(8, num_test);
+    //tlwelvl2_comparison_test(16, 1);
+    // tlwelvl2_comparison_test(32, num_test);
 }
-

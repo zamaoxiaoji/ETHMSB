@@ -1,0 +1,249 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "lib/libHEDB.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"ADD_DEFINITIONS",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 39,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 42,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 7,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 40,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 41,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-O0 -g -fopenmp -g -std=gnu++20 -fdiagnostics-color=always"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "HEDB_DEBUG"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "/home/tl/HE3DB/src"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/tl/HE3DB/thirdparty/SEAL/natice/src"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/tl/HE3DB/thirdparty/TFHEpp/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/tl/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/tl/HE3DB/thirdparty/TFHEpp/thirdparties/fftw"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/tl/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/tl/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/tl/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/tl/HE3DB/thirdparty/TFHEpp/thirdparties/randen"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/tl/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/tl/HE3DB/thirdparty/SEAL/native/src"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/tl/HE3DB/cmake-build-debug/thirdparty/SEAL/native/src"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/tl/HE3DB/cmake-build-debug/thirdparty/SEAL/thirdparty/msgsl-src/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					2
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "spqlios::@4776ed86303d546cd998"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "randen::@6f599246a9f0f4299bc9"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "tfhe++::@0c60da544c38484cb9e3"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "seal::@04c88f895e774f020d65"
+		}
+	],
+	"id" : "HEDB::@6890427a1f51a3e7e1df",
+	"name" : "HEDB",
+	"nameOnDisk" : "libHEDB.a",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/HEDB/comparison/extract_msb.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/HEDB/comparison/HomCompare.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/HEDB/comparison/operators.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/HEDB/comparison/tfhepp_utils.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/HEDB/conversion/repack.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/HEDB/conversion/polyeval_bsgs.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/HEDB/conversion/seal_util.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/HEDB/utils/serialize.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

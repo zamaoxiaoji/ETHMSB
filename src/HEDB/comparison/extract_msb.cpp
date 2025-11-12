@@ -1,11 +1,84 @@
 #include "extract_msb.h"
 #include "HEDB/utils/utils.h"
+#include "tfhepp_utils.h"
+using namespace std;
+using namespace TFHEpp;
 namespace HEDB
 {
     void ExtractMSB5(TLWELvl1 &res, const TLWELvl1 &tlwe, const TFHEEvalKey &ek, bool result_type)
     {
         MSBGateBootstrapping(res, tlwe, ek, result_type);
     }
+
+    ///////////////////////////////////添加
+    void my_ExtractMSB9(TLWELvl1 &res, const TLWELvl1 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type, uint32_t k)
+    {
+        TLWELvl1 shift_tlwe, sign_tlwe5;
+        uint32_t scale_bits = std::numeric_limits<Lvl1::T>::digits - plain_bits;
+        for (size_t i = 0; i <= Lvl1 :: n; i++)
+        {
+            shift_tlwe[i] = tlwe[i] << (plain_bits - 5);
+        }
+        my_MSBGateBootstrapping(sign_tlwe5, shift_tlwe, ek, ARITHMETIC, plain_bits - 5);
+        
+        for (size_t i = 0; i <= Lvl1 :: n; i++)
+        {
+            res[i] = tlwe[i] - sign_tlwe5[i];
+        }
+        
+        //my_MSBGateBootstrapping(res, res, ek, ARITHMETIC, (plain_bits - 5) +1);
+        my_MSBGateBootstrapping(res, res, ek, result_type, (31-k));
+    }
+
+    void my_ImExtractMSB5(TLWELvl1 &res, const TLWELvl2 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type, uint32_t k)
+    {
+        TFHEpp::IdentityKeySwitch<TFHEpp::lvl21param>(res, tlwe, *ek.iksklvl21);
+        //my_ExtractMSB5(res, res, ek, result_type);
+        my_MSBGateBootstrapping(res, res, ek, result_type, (31-k));
+    }
+
+    void my_ImExtractMSB9(TLWELvl1 &res, const TLWELvl2 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type, uint32_t k)
+    {
+        TFHEpp::IdentityKeySwitch<TFHEpp::lvl21param>(res, tlwe, *ek.iksklvl21);
+        my_ExtractMSB9(res, res, plain_bits, ek, result_type, k);
+    }
+
+    void my_ImExtractMSB14(TLWELvl1 &res, const TLWELvl2 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type, uint32_t k)
+    {
+        TLWELvl2 shift_tlwe, sign_tlwe6;
+        uint32_t scale_bits = std::numeric_limits<Lvl2::T>::digits - plain_bits;
+        for (size_t i = 0; i <= Lvl2 :: n; i++)
+        {
+             shift_tlwe[i] = tlwe[i] << (plain_bits - 6);
+        }
+        my_MSBGateBootstrapping(sign_tlwe6, shift_tlwe, ek, ARITHMETIC,plain_bits - 6);
+        
+        for (size_t i = 0; i <= Lvl2 :: n; i++)
+        {
+            shift_tlwe[i] = tlwe[i] - sign_tlwe6[i];
+        }
+        TFHEpp::IdentityKeySwitch<TFHEpp::lvl21param>(res, shift_tlwe, *ek.iksklvl21);
+        my_ExtractMSB9(res, res, plain_bits - 5, ek, result_type, k);
+    }
+
+    void my_ImExtractMSB19(TLWELvl1 &res, const TLWELvl2 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type,uint32_t k)
+    {
+        TLWELvl2 shift_tlwe, sign_tlwe6;
+        uint32_t scale_bits = std::numeric_limits<Lvl2::T>::digits - plain_bits;
+        for (size_t i = 0; i <= Lvl2 :: n; i++)
+        {
+            shift_tlwe[i] = tlwe[i] << (plain_bits - 6);
+        }
+        my_MSBGateBootstrapping(sign_tlwe6, shift_tlwe, ek, ARITHMETIC, plain_bits - 6);
+        
+        for (size_t i = 0; i <= Lvl2 :: n; i++)
+        {
+            shift_tlwe[i] = tlwe[i] - sign_tlwe6[i];
+        }
+        my_ImExtractMSB14(res, shift_tlwe, plain_bits - 5, ek, result_type, k);
+    }
+    //////////////////////////////////////////////////////////////////////
+
 
     void ExtractMSB9(TLWELvl1 &res, const TLWELvl1 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type)
     {
@@ -27,7 +100,7 @@ namespace HEDB
         }
         ExtractMSB5(res, res, ek, result_type);
     }
-
+    
     void ExtractMSB10(TLWELvl1 &res, const TLWELvl1 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type)
     {
         TLWELvl1 shift_tlwe, sign_tlwe5;
@@ -68,6 +141,23 @@ namespace HEDB
             res[i] = tlwe[i] - shift_tlwe[i];
         }
         MSBGateBootstrapping(res, res, ek, result_type);
+    }
+
+    void my_ExtractMSB11(TLWELvl2 &res, const TLWELvl2 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type)
+    {
+        TLWELvl2 shift_tlwe, sign_tlwe6;
+        uint32_t scale_bits = std::numeric_limits<Lvl2::T>::digits - plain_bits;
+        for (size_t i = 0; i <= Lvl2 :: n; i++)
+        {
+            shift_tlwe[i] = tlwe[i] << (plain_bits - 6);
+        }
+        my_MSBGateBootstrapping(sign_tlwe6, shift_tlwe, ek, ARITHMETIC, 6);
+        for (size_t i = 0; i <= Lvl2 :: n; i++)
+        {
+            shift_tlwe[i] = shift_tlwe[i] - sign_tlwe6[i];
+        }
+        
+        my_MSBGateBootstrapping(sign_tlwe6, shift_tlwe, ek, ARITHMETIC, 0);
     }
 
     void ExtractMSB16(TLWELvl2 &res, const TLWELvl2 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type)
@@ -146,6 +236,7 @@ namespace HEDB
         ExtractMSB9(res, res, plain_bits - 5, ek, result_type);
     }
 
+
     void ImExtractMSB19(TLWELvl1 &res, const TLWELvl2 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type)
     {
         TLWELvl2 shift_tlwe, sign_tlwe6;
@@ -166,7 +257,7 @@ namespace HEDB
         }
         ImExtractMSB14(res, shift_tlwe, plain_bits - 5, ek, result_type);
     }
-
+    
     void ImExtractMSB24(TLWELvl1 &res, const TLWELvl2 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type)
     {
         TLWELvl2 shift_tlwe, sign_tlwe6;

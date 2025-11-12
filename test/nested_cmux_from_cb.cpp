@@ -1,0 +1,150 @@
+#include <cassert>
+#include <chrono>
+#include <iostream>
+#include <random>
+#include <tfhe++.hpp>
+
+#include <iostream>
+#include <chrono>
+#include <random>
+#include<bitset>
+#include "HEDB/comparison/comparison.h"
+#include "HEDB/utils/utils.h"
+
+#include "HEDB/comparison/tfhepp_utils.h"
+#include <gatebootstrapping.hpp>
+#include "detwfa.hpp"
+
+#include <cassert>
+#include <tfhe++.hpp>
+
+using namespace std;
+using namespace HEDB;
+using namespace TFHEpp;
+
+using TRGSWLvl1FFT = TFHEpp::TRGSWFFT<TFHEpp::lvl1param>;
+using TRLWELvl1 = TFHEpp::TRLWE<TFHEpp::lvl1param>;
+using PolyLvl1 = TFHEpp::Polynomial<TFHEpp::lvl1param>;
+using SecretKey = TFHEpp::SecretKey;
+using Lvl1 = TFHEpp::lvl1param;
+
+PolyLvl1 uint2weight(uint64_t n)
+{
+    PolyLvl1 w;
+    const uint32_t mu = 1u << 31;
+    for (size_t i = 0; i < Lvl1::n; i++)
+        if (i < 64)
+            w[i] = ((n >> i) & 1u) ? mu : 0;
+        else
+            w[i] = 0;
+    return w;
+}
+
+TRLWELvl1 trivial_TRLWELvl1(const PolyLvl1 &src)
+{
+    TRLWELvl1 ret = {};
+    ret[1] = src;
+    return ret;
+}
+
+PolyLvl1 phase_of_TRLWELvl1(const TRLWELvl1 &src, const SecretKey &skey)
+{
+    PolyLvl1 as;
+
+    TFHEpp::Polynomial<TFHEpp::lvl1param> partkey;
+    for (int i = 0; i < TFHEpp::lvl1param::n; i++)
+        partkey[i] = skey.key.lvl1[0 * TFHEpp::lvl1param::n + i];
+    TFHEpp::PolyMul<Lvl1>(as, src[0], partkey);
+    PolyLvl1 phase = src[1];
+    for (size_t i = 0; i < Lvl1::n; i++) phase[i] -= as[i];
+    return phase;
+}
+
+void dump_histgram_of_phase_of_TRLWELvl1(std::ostream &os, const PolyLvl1 &src)
+{
+    std::vector<size_t> hist(10, 0);
+    for (size_t i = 0; i < Lvl1::n; i++) {
+        size_t v =
+            static_cast<size_t>(src[i] / (std::pow<double>(2.0, 32) / 10.0));
+        hist.at(v)++;
+    }
+    for (size_t i = 0; i < 10; i++)
+        os << 0.1 * i << ": \t" << hist.at(i) << "\n";
+    os << "\n";
+}
+
+int main()
+{
+    using P = Lvl1;
+    const size_t N = 1;
+    std::cout << "N = " << N << std::endl;
+
+    SecretKey skey;
+    TFHEpp::EvalKey ekey;
+    ekey.emplaceiksk<TFHEpp::lvl10param>(skey);
+    ekey.emplacebkfft<TFHEpp::lvl02param>(skey);
+    ekey.emplaceprivksk4cb<TFHEpp::lvl21param>(skey);
+
+    std::vector<TRGSWLvl1FFT> guard;
+    for (size_t i = 0; i < N; i++) {
+        TFHEpp::TRGSWFFT<Lvl1> trgsw;
+        TFHEpp::TLWE<Lvl1> tlwe = TFHEpp::tlweSymEncrypt<Lvl1>(Lvl1::μ, Lvl1::α, skey.key.lvl1);
+        TFHEpp::CircuitBootstrappingFFT<TFHEpp::lvl10param, TFHEpp::lvl02param, TFHEpp::lvl21param>(trgsw, tlwe, ekey);
+        guard.emplace_back(std::move(trgsw));
+    }
+
+    TRLWELvl1 c1 = trivial_TRLWELvl1(uint2weight(1)),
+              c0 = trivial_TRLWELvl1(uint2weight(0));
+    TRLWELvl1 res = c1;
+    dump_histgram_of_phase_of_TRLWELvl1(std::cout,
+                                        phase_of_TRLWELvl1(res, skey));
+    for (size_t i = 0; i < N; i++) {
+        TRLWELvl1 tmp = res;
+        TFHEpp::CMUXFFT<Lvl1>(res, guard.at(i), tmp, c0);
+    }
+    dump_histgram_of_phase_of_TRLWELvl1(std::cout,
+                                        phase_of_TRLWELvl1(res, skey));
+    
+    Polynomial<Lvl1> de_c0 = TFHEpp::trlweSymInt32Decrypt<Lvl1>(c0, pow(2., 29), skey.key.lvl1);
+    Polynomial<Lvl1> de_c1 = TFHEpp::trlweSymInt32Decrypt<Lvl1>(c1, pow(2., 29), skey.key.lvl1);
+    Polynomial<Lvl1> de_cres = TFHEpp::trlweSymInt32Decrypt<Lvl1>(res, pow(2., 29), skey.key.lvl1);
+    
+    std::cout << "de_cres: " << std::endl;
+    for(int i = 0 ; i<P::n ; i++){
+        std::cout << de_cres[i];
+    }
+    std::cout << std::endl;
+    std::cout << "de_c0: " << std::endl;
+    for(int i = 0 ; i<P::n ; i++){
+        std::cout << de_c0[i] ;
+    }
+    std::cout << std::endl;
+    std::cout << "de_c1: " << std::endl;
+    for(int i = 0 ; i<P::n ; i++){
+        std::cout << de_c1[i] ;
+    }
+    std::cout << std::endl;
+    
+
+    /*
+    PolyLvl1 testvec1 = {}, testvec2 = {};
+    for (size_t i = 0; i < Lvl1::n; i++) {
+        testvec1.at(i) = (1u << 29);
+        testvec2.at(i) = (1u << 29);
+    }
+    TRLWELvl1 c1 = trivial_TRLWELvl1(testvec2),
+              c0 = trivial_TRLWELvl1(testvec1);
+    TRLWELvl1 res = c1;
+    dump_histgram_of_phase_of_TRLWELvl1(std::cout,
+                                        phase_of_TRLWELvl1(res, skey));
+    for (size_t i = 0; i < N; i++) {
+        TRLWELvl1 trlwe0 = res, trlwe1 = {};
+        size_t k = rand() % (2 * Lvl1::n);
+        TFHEpp::PolynomialMulByXai<Lvl1>(trlwe1[0], trlwe0[0], k);
+        TFHEpp::PolynomialMulByXai<Lvl1>(trlwe1[1], trlwe0[1], k);
+        TFHEpp::CMUXFFT<Lvl1>(res, guard.at(i), trlwe1, trlwe0);
+    }
+    dump_histgram_of_phase_of_TRLWELvl1(std::cout,
+                                        phase_of_TRLWELvl1(res, skey));
+    */
+}

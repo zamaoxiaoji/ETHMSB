@@ -203,6 +203,12 @@ void EvalKey::emplaceiksk(const SecretKey& sk)
         iksklvl21 = std::make_unique<KeySwitchingKey<lvl21param>>();
         ikskgen<lvl21param>(*iksklvl21, sk);
     }
+    ///////////////////////////////////////////////////////////////////
+    else if constexpr (std::is_same_v<P, lvl11param>) {
+        iksklvl11 = std::make_unique<KeySwitchingKey<lvl11param>>();
+        ikskgen<lvl11param>(*iksklvl11, sk);
+    }
+    ///////////////////////////////////////////////////////////////////
 }
 #define INST(P) template void EvalKey::emplaceiksk<P>(const SecretKey& sk)
 TFHEPP_EXPLICIT_INSTANTIATION_KEY_SWITCH_TO_TLWE(INST)

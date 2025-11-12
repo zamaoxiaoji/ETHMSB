@@ -28,6 +28,8 @@ namespace HEDB
     using TRLWELvl0 = TFHEpp::TRLWE<Lvl0>;
     using TRLWELvl1 = TFHEpp::TRLWE<Lvl1>;
     using TRLWELvl2 = TFHEpp::TRLWE<Lvl2>;
+    using TRGSWLvl1 = TFHEpp::TRGSWFFT<Lvl1>;
+    using TRGSWLvl2 = TFHEpp::TRGSWFFT<Lvl2>;
     using TFHEEvalKey = TFHEpp::EvalKey;
     using TFHESecretKey = TFHEpp::SecretKey;
     using TFHETLWE2TRLWEIKSKey11 = TFHEpp::TLWE2TRLWEIKSKey<TFHEpp::lvl11param>;

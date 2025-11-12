@@ -1,0 +1,81 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"cmake-build-debug/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 149,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 153,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib/pkgconfig",
+			"paths" : 
+			[
+				"cmake-build-debug/thirdparty/SEAL/thirdparty/zstd-build/lib/libzstd.pc"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"cmake-build-debug/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/zstd.h",
+				"cmake-build-debug/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/deprecated/zbuff.h",
+				"cmake-build-debug/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/dictBuilder/zdict.h",
+				"cmake-build-debug/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/dictBuilder/cover.h",
+				"cmake-build-debug/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common/zstd_errors.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"thirdparty/SEAL/lib/libzstd.a"
+			],
+			"targetId" : "libzstd_static::@cde12ca4d75a524973b8",
+			"targetIndex" : 15,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "thirdparty/SEAL/thirdparty/zstd-build/lib",
+		"source" : "cmake-build-debug/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib"
+	}
+}

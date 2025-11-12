@@ -13,6 +13,9 @@
 #include <utils.hpp>
 #include <vector>
 
+#include<bitset>
+using namespace std;
+
 namespace TFHEpp {
 
 template <class P>
@@ -22,11 +25,27 @@ TLWE<P> tlweSymEncrypt(const typename P::T p, const double α, const Key<P> &key
         0, std::numeric_limits<typename P::T>::max());
     TLWE<P> res = {};
     res[P::k * P::n] = ModularGaussian<P>(p, α);
-    for (int k = 0; k < P::k; k++)
+    
+    //////////////////////////////加的
+    uint64_t temp = res[P::k * P::n];
+    
+    
+    for (int k = 0; k < P::k; k++){
         for (int i = 0; i < P::n; i++) {
             res[k * P::n + i] = Torusdist(generator);
             res[P::k * P::n] += res[k * P::n + i] * key[k * P::n + i];
+            
+            /////////////////////////////////////////////////加
+            temp += res[k * P::n + i] * key[k * P::n + i];
+            
         }
+        /////////////////////////////////////////////////加
+        // uint32_t extra_first_bit = ((temp - res[P::k * P::n]) >> 32)%2;
+        // std::cout<<"changed tlweSymEncrypt in thirdparty\\TFHEpp\\src\\tlwe.cpp "<< std::endl;
+        // std::cout<<"res[n]:0000000000000000000000000000000@"<< bitset<32>(res[P::k * P::n ]) << std::endl;
+        // std::cout<<"temp  :"<< bitset<64>(temp) << std::endl;
+        // std::cout<<"extra_first_bit:"<< extra_first_bit<< std::endl;
+    }
     return res;
 }
 #define INST(P)                                                               \

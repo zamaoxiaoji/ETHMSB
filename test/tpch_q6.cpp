@@ -74,10 +74,10 @@ void predicate_evaluation(std::vector<TLWELvl1> &pred_cres, std::vector<uint32_t
     //Encrypt Predicate values
     std::cout<< "Encrypting Predicate Values..." << std::endl;
     Lvl1::T pred3, pred4, pred5;
-    Lvl2::T pred1 = 20101, pred2 = 21231;
+    Lvl2::T pred1 = 20101, pred2 = 21101;
     pred3 =  8;
     pred4 = pred3 + 2;
-    pred5 = 32;
+    pred5 = 10;
 
     std::vector<Lvl1::T> pred_res1(rows, 0), pred_res2(rows, 0), pred_res3(rows, 0), pred_res4(rows, 0), pred_res5(rows, 0);
     for (size_t i = 0; i < rows; i++)
@@ -139,7 +139,7 @@ void predicate_evaluation(std::vector<TLWELvl1> &pred_cres, std::vector<uint32_t
         pred_cres_de[i] = TFHEpp::tlweSymInt32Decrypt<Lvl1>(pred_cres[i], pow(2., 29), sk.key.get<Lvl1>());
     }
     for (size_t i = 0; i < rows; i++) error_time += (pred_cres_de[i] == pred_res[i])? 0 : 1;
-    // cout << "Predicate Evaluaton Time (s): " << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() / 1000 << std::endl;
+    cout << "Predicate Evaluaton Time (s): " << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() / 1000 << std::endl;
     cout << "Predicate Error: " << error_time << std::endl;
     filter_time = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
 
@@ -257,6 +257,7 @@ void aggregation(std::vector<TLWELvl1> &pred_cres, std::vector<uint32_t> &pred_r
 void query_evaluation(size_t rows)
 {
     TFHESecretKey sk;
+
     std::random_device seed_gen;
     std::default_random_engine engine(seed_gen());
      // Generate database
@@ -265,7 +266,7 @@ void query_evaluation(size_t rows)
     uint32_t quantity_bits = 6, ship_bits = 16, discount_bits = 4, quantity_scale_bits, ship_scale_bits, discount_scale_bits;
     uniform_int_distribution<Lvl1::T> quantity_message(0, (1 << quantity_bits) - 1);
     uniform_int_distribution<Lvl1::T> discount_message(0, (1 << discount_bits) - 1);
-    quantity_scale_bits = std::numeric_limits<Lvl1::T>::digits - quantity_bits - 1;
+    quantity_scale_bits = std::numeric_limits<Lvl1::T>::digits - quantity_bits - 1; //32-6-1
     ship_scale_bits = std::numeric_limits<Lvl2::T>::digits - ship_bits - 1;
     discount_scale_bits = std::numeric_limits<Lvl1::T>::digits - discount_bits - 1;
     for (size_t i = 0; i < rows; i++)
@@ -291,14 +292,13 @@ void query_evaluation(size_t rows)
     std::vector<uint32_t> pred_res(rows, 0);
     predicate_evaluation(pred_cres, pred_res, rows, quanlity_data, discount_data, ship_data, sk, filter_time);
     aggregation(pred_cres, pred_res, Lvl1::n, extendedprice_data, discount_data_double, rows, sk, aggregation_time);
+    cout << "filter_time Time: " << filter_time / 1000 << " s" << endl;
+    cout << "aggregation_time Time: " << aggregation_time / 1000 << " s" << endl;
     cout << "End-to-End Time: " << (filter_time + aggregation_time) / 1000 << " s" << endl;
 
 }
 
 int main()
 {
-    query_evaluation(16);
+    query_evaluation(128);
 }
-
-
-

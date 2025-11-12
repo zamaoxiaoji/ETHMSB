@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "thirdparty/SEAL/thirdparty/zlib-build",
+		"source" : "cmake-build-debug/thirdparty/SEAL/thirdparty/zlib-src"
+	}
+}

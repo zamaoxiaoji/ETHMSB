@@ -1,0 +1,46 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"src/HEDB/conversion/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 9,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "include/HEDB/HEDB/conversion",
+			"paths" : 
+			[
+				"src/HEDB/conversion/repack.h",
+				"src/HEDB/conversion/polyeval_bsgs.h",
+				"src/HEDB/conversion/conversion.h",
+				"src/HEDB/conversion/seal_util.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/HEDB/conversion",
+		"source" : "src/HEDB/conversion"
+	}
+}
