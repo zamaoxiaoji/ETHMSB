@@ -16,7 +16,9 @@ evalkey/
 data/
 build*/
 .vscode/
-
+.cache/
+cmake-build-debug/
+test/cmake-build-debug/
 # Compiled Python bytecode
 *.py[cod]
 
@@ -54,4 +56,3 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
-

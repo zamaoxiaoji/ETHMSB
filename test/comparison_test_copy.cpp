@@ -4,10 +4,10 @@
 #include <chrono>
 #include <random>
 #include<bitset>
-#include "src/HEDB/comparison/comparison.h"
-#include "HEDB/utils/utils.h"
+#include "../src/HEDB/comparison/comparison.h"
+#include "../src/HEDB/utils/utils.h"
 
-#include "src/HEDB/comparison/tfhepp_utils.h"
+#include "../src/HEDB/comparison/tfhepp_utils.h"
 #include <gatebootstrapping.hpp>
 #include "detwfa.hpp"
 
@@ -1291,8 +1291,8 @@ void euqual_to_test(uint32_t plain_bits, int num_test)
 int main()
 {
     int num_test = 10000;
-    euqual_to_test(6, 5);
-    //my_comparison_test(5,1);
+    // euqual_to_test(6, 5);
+    my_comparison_test(5,1);
     //n_and_test(32,100);
     //add_replace_and_test(4, num_test);
     //msb_related_test(5, num_test);

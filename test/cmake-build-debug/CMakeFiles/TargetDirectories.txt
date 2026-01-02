@@ -3,6 +3,7 @@
 /home/tl/HE3DB/test/cmake-build-debug/CMakeFiles/tpch_q6.dir
 /home/tl/HE3DB/test/cmake-build-debug/CMakeFiles/tpch_q6_copy.dir
 /home/tl/HE3DB/test/cmake-build-debug/CMakeFiles/comparison_test_copy.dir
+/home/tl/HE3DB/test/cmake-build-debug/CMakeFiles/comparison_test_tl.dir
 /home/tl/HE3DB/test/cmake-build-debug/CMakeFiles/tpch_q6_mytest1.dir
 /home/tl/HE3DB/test/cmake-build-debug/CMakeFiles/add_test.dir
 /home/tl/HE3DB/test/cmake-build-debug/CMakeFiles/add_replace_and_test.dir

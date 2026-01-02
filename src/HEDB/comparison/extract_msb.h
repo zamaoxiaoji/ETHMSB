@@ -17,7 +17,10 @@ namespace HEDB
     void my_ImExtractMSB9(TLWELvl1 &res, const TLWELvl2 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type, uint32_t k);
     void my_ImExtractMSB14(TLWELvl1 &res, const TLWELvl2 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type, uint32_t k);
     void my_ImExtractMSB19(TLWELvl1 &res, const TLWELvl2 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type, uint32_t k);
-    
+    void my_ImExtractMSB24(TLWELvl1 &res, const TLWELvl2 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type, uint32_t k);
+    void my_ImExtractMSB29(TLWELvl1 &res, const TLWELvl2 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type, uint32_t k);
+    void my_ImExtractMSB34(TLWELvl1 &res, const TLWELvl2 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type, uint32_t k);
+
     void ExtractMSB10(TLWELvl1 &res, const TLWELvl1 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type);
 
     //Extract msb 11

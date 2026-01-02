@@ -2,10 +2,10 @@
 #include <chrono>
 #include <random>
 #include<bitset>
-#include "src/HEDB/comparison/comparison.h"
-#include "src/HEDB/utils/utils.h"
+#include "../src/HEDB/comparison/comparison.h"
+#include "../src/HEDB/utils/utils.h"
 
-#include "src/HEDB/comparison/tfhepp_utils.h"
+#include "../src/HEDB/comparison/tfhepp_utils.h"
 #include <gatebootstrapping.hpp>
 #include "detwfa.hpp"
 

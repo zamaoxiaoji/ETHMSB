@@ -13,6 +13,9 @@ target_link_libraries(tpch_q6_copy HEDB)
 add_executable(comparison_test_copy comparison_test_copy.cpp)
 target_link_libraries(comparison_test_copy HEDB)
 
+add_executable(comparison_test_tl comparison_test_tl.cpp)
+target_link_libraries(comparison_test_tl HEDB)
+
 add_executable(tpch_q6_mytest1 tpch_q6_mytest1.cpp)
 target_link_libraries(tpch_q6_mytest1 HEDB)
 

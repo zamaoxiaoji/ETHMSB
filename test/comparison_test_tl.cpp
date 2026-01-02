@@ -3,6 +3,7 @@
 #include <random>
 #include "../src/HEDB/comparison/comparison.h"
 #include "../src/HEDB/utils/utils.h"
+#include "../src/HEDB/comparison/HomCompare.h"
 
 using namespace HEDB;
 
@@ -26,7 +27,7 @@ void tlwelvl1_comparison_test(uint32_t plain_bits, int num_test)
     std::vector<uint32_t> error_time(5, 0);
     std::vector<double> comparison_time(5, 0.);
     // For simplicity，the input range is [0, 2^(p-1) -1]
-    std::uniform_int_distribution<typename P::T> message(0, (1 << (plain_bits - 1) - 1));
+    std::uniform_int_distribution<typename P::T> message(0, (1 << (plain_bits - 1)) - 1);
     std::uniform_int_distribution<typename P::T> type(0, 1);
     scale_bits = std::numeric_limits<P::T>::digits - plain_bits - 1;
     typename P::T p0,p1, gres, geres, lres, leres, eres, dgres, dgeres, dlres, dleres, deres;
@@ -35,7 +36,7 @@ void tlwelvl1_comparison_test(uint32_t plain_bits, int num_test)
     std::chrono::system_clock::time_point start, end;
     for (int test = 0; test < num_test; test++) 
     {
-        
+        p0 = message(engine);
         p1 = message(engine);
         bool result_type = ARITHMETIC;
         if (p0 > p1) gres = 1;
@@ -53,7 +54,7 @@ void tlwelvl1_comparison_test(uint32_t plain_bits, int num_test)
 
         //Greater than
         start = std::chrono::system_clock::now();
-        greater_than<P>(c0, c1, cres, plain_bits, ek, result_type);
+        my_greater_than<P>(c0, c1, cres, plain_bits, ek, result_type,28);
         end = std::chrono::system_clock::now();
         ARI_to_LOG(cres, cres, ek);
         result_type = LOGIC;
@@ -64,7 +65,7 @@ void tlwelvl1_comparison_test(uint32_t plain_bits, int num_test)
 
         // Greater than or euqal to
         start = std::chrono::system_clock::now();
-        greater_than_equal<P>(c0, c1, cres, plain_bits, ek, result_type);
+        my_greater_than_equal<P>(c0, c1, cres, plain_bits, ek, result_type,28);
         end = std::chrono::system_clock::now();
         comparison_time[1] += std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
         if(IS_ARITHMETIC(result_type)) dgeres = TFHEpp::tlweSymInt32Decrypt<P>(cres, pow(2., 31), sk.key.lvl1);
@@ -73,7 +74,7 @@ void tlwelvl1_comparison_test(uint32_t plain_bits, int num_test)
 
         // less than 
         start = std::chrono::system_clock::now();
-        less_than<P>(c0, c1, cres, plain_bits, ek, result_type);
+        my_less_than<P>(c0, c1, cres, plain_bits, ek, result_type,28);
         end = std::chrono::system_clock::now();
         comparison_time[2] += std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
         if(IS_ARITHMETIC(result_type)) dlres = TFHEpp::tlweSymInt32Decrypt<P>(cres, pow(2., 31), sk.key.lvl1);
@@ -82,7 +83,7 @@ void tlwelvl1_comparison_test(uint32_t plain_bits, int num_test)
 
         //less than or equal to
         start = std::chrono::system_clock::now();
-        less_than_equal<P>(c0, c1, cres, plain_bits, ek, result_type);
+        my_less_than_equal<P>(c0, c1, cres, plain_bits, ek, result_type,28);
         end = std::chrono::system_clock::now();
         comparison_time[3] += std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
         if(IS_ARITHMETIC(result_type)) dleres = TFHEpp::tlweSymInt32Decrypt<P>(cres, pow(2., 31), sk.key.lvl1);
@@ -90,8 +91,9 @@ void tlwelvl1_comparison_test(uint32_t plain_bits, int num_test)
         if (leres != dleres) error_time[3] += 1;
 
         //equal to
+        TLWELvl1 number_one_cipher_at28= TFHEpp::tlweSymInt32Encrypt<Lvl1>(1, Lvl1::α, pow(2., 28), sk.key.get<Lvl1>());;
         start = std::chrono::system_clock::now();
-        equal<P>(c0, c1, cres, plain_bits, ek, result_type);
+        my_equal<P>(c0, c1, cres, number_one_cipher_at28, plain_bits, ek, result_type,28);
         end = std::chrono::system_clock::now();
         comparison_time[4] += std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
         if(IS_ARITHMETIC(result_type)) deres = TFHEpp::tlweSymInt32Decrypt<P>(cres, pow(2., 31), sk.key.lvl1);
@@ -128,7 +130,7 @@ void tlwelvl2_comparison_test(uint32_t plain_bits, int num_test)
     uint32_t scale_bits;
     std::vector<uint32_t> error_time(5, 0);
     std::vector<double> comparison_time(5, 0.);
-    std::uniform_int_distribution<typename P::T> message(0, (1 << (plain_bits -1) - 1));
+    std::uniform_int_distribution<typename P::T> message(0, (1 << (plain_bits - 1)) - 1);
     std::uniform_int_distribution<typename P::T> type(0, 1);
     scale_bits = std::numeric_limits<P::T>::digits - plain_bits - 1;
     typename P::T p0,p1, gres, geres, lres, leres, eres, dgres, dgeres, dlres, dleres, deres;
@@ -153,10 +155,9 @@ void tlwelvl2_comparison_test(uint32_t plain_bits, int num_test)
         c0 = TFHEpp::tlweSymInt32Encrypt<P>(p0, P::α, pow(2., scale_bits), sk.key.get<P>());
         c1 = TFHEpp::tlweSymInt32Encrypt<P>(p1, P::α, pow(2., scale_bits), sk.key.get<P>());
 
-
         //Greater than
         start = std::chrono::system_clock::now();
-        greater_than<P>(c0, c1, cres, plain_bits, ek, result_type);
+        my_greater_than<P>(c0, c1, cres, plain_bits, ek, result_type,28);
         end = std::chrono::system_clock::now();
         comparison_time[0] += std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
         if(IS_ARITHMETIC(result_type)) dgres = TFHEpp::tlweSymInt32Decrypt<Lvl1>(cres, pow(2., 31), sk.key.lvl1);
@@ -165,7 +166,7 @@ void tlwelvl2_comparison_test(uint32_t plain_bits, int num_test)
 
         // Greater than or euqal to
         start = std::chrono::system_clock::now();
-        greater_than_equal<P>(c0, c1, cres, plain_bits, ek, result_type);
+        my_greater_than_equal<P>(c0, c1, cres, plain_bits, ek, result_type,28);
         end = std::chrono::system_clock::now();
         comparison_time[1] += std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
         if(IS_ARITHMETIC(result_type)) dgeres = TFHEpp::tlweSymInt32Decrypt<Lvl1>(cres, pow(2., 31), sk.key.lvl1);
@@ -174,7 +175,7 @@ void tlwelvl2_comparison_test(uint32_t plain_bits, int num_test)
 
         // less than 
         start = std::chrono::system_clock::now();
-        less_than<P>(c0, c1, cres, plain_bits, ek, result_type);
+        my_less_than<P>(c0, c1, cres, plain_bits, ek, result_type,28);
         end = std::chrono::system_clock::now();
         comparison_time[2] += std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
         if(IS_ARITHMETIC(result_type)) dlres = TFHEpp::tlweSymInt32Decrypt<Lvl1>(cres, pow(2., 31), sk.key.lvl1);
@@ -183,7 +184,7 @@ void tlwelvl2_comparison_test(uint32_t plain_bits, int num_test)
 
         //less than or equal to
         start = std::chrono::system_clock::now();
-        less_than_equal<P>(c0, c1, cres, plain_bits, ek, result_type);
+        my_less_than_equal<P>(c0, c1, cres, plain_bits, ek, result_type,28);
         end = std::chrono::system_clock::now();
         comparison_time[3] += std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
         if(IS_ARITHMETIC(result_type)) dleres = TFHEpp::tlweSymInt32Decrypt<Lvl1>(cres, pow(2., 31), sk.key.lvl1);
@@ -191,8 +192,9 @@ void tlwelvl2_comparison_test(uint32_t plain_bits, int num_test)
         if (leres != dleres) error_time[3] += 1;
 
         //equal to
+        TLWELvl1 number_one_cipher_at28= TFHEpp::tlweSymInt32Encrypt<Lvl1>(1, Lvl1::α, pow(2., 28), sk.key.get<Lvl1>());;
         start = std::chrono::system_clock::now();
-        equal<P>(c0, c1, cres, plain_bits, ek, result_type);
+        my_equal<P>(c0, c1, cres, number_one_cipher_at28, plain_bits, ek, result_type,28);
         end = std::chrono::system_clock::now();
         comparison_time[4] += std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
         if(IS_ARITHMETIC(result_type)) deres = TFHEpp::tlweSymInt32Decrypt<Lvl1>(cres, pow(2., 31), sk.key.lvl1);
@@ -211,8 +213,13 @@ void tlwelvl2_comparison_test(uint32_t plain_bits, int num_test)
 
 int main()
 {
-    int num_test = 10;
+    int num_test = 100;
+    // 8 bit 使用 lvl1 (1-9 bits)
+    tlwelvl1_comparison_test(4, num_test);
     tlwelvl1_comparison_test(8, num_test);
-    //tlwelvl2_comparison_test(16, 1);
-    // tlwelvl2_comparison_test(32, num_test);
+    // 16, 24, 32 bit 使用 lvl2 (10-32 bits)
+    tlwelvl2_comparison_test(16, num_test);
+    tlwelvl2_comparison_test(24, num_test);
+    tlwelvl2_comparison_test(32, num_test);
 }
+

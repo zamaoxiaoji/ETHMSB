@@ -77,6 +77,57 @@ namespace HEDB
         }
         my_ImExtractMSB14(res, shift_tlwe, plain_bits - 5, ek, result_type, k);
     }
+
+    void my_ImExtractMSB24(TLWELvl1 &res, const TLWELvl2 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type,uint32_t k)
+    {
+        TLWELvl2 shift_tlwe, sign_tlwe6;
+        uint32_t scale_bits = std::numeric_limits<Lvl2::T>::digits - plain_bits;
+        for (size_t i = 0; i <= Lvl2 :: n; i++)
+        {
+            shift_tlwe[i] = tlwe[i] << (plain_bits - 6);
+        }
+        my_MSBGateBootstrapping(sign_tlwe6, shift_tlwe, ek, ARITHMETIC, plain_bits - 6);
+        
+        for (size_t i = 0; i <= Lvl2 :: n; i++)
+        {
+            shift_tlwe[i] = tlwe[i] - sign_tlwe6[i];
+        }
+        my_ImExtractMSB19(res, shift_tlwe, plain_bits - 5, ek, result_type, k);
+    }
+
+    void my_ImExtractMSB29(TLWELvl1 &res, const TLWELvl2 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type,uint32_t k)
+    {
+        TLWELvl2 shift_tlwe, sign_tlwe6;
+        uint32_t scale_bits = std::numeric_limits<Lvl2::T>::digits - plain_bits;
+        for (size_t i = 0; i <= Lvl2 :: n; i++)
+        {
+            shift_tlwe[i] = tlwe[i] << (plain_bits - 6);
+        }
+        my_MSBGateBootstrapping(sign_tlwe6, shift_tlwe, ek, ARITHMETIC, plain_bits - 6);
+        
+        for (size_t i = 0; i <= Lvl2 :: n; i++)
+        {
+            shift_tlwe[i] = tlwe[i] - sign_tlwe6[i];
+        }
+        my_ImExtractMSB24(res, shift_tlwe, plain_bits - 5, ek, result_type, k);
+    }
+
+    void my_ImExtractMSB34(TLWELvl1 &res, const TLWELvl2 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type,uint32_t k)
+    {
+        TLWELvl2 shift_tlwe, sign_tlwe6;
+        uint32_t scale_bits = std::numeric_limits<Lvl2::T>::digits - plain_bits;
+        for (size_t i = 0; i <= Lvl2 :: n; i++)
+        {
+            shift_tlwe[i] = tlwe[i] << (plain_bits - 6);
+        }
+        my_MSBGateBootstrapping(sign_tlwe6, shift_tlwe, ek, ARITHMETIC, plain_bits - 6);
+        
+        for (size_t i = 0; i <= Lvl2 :: n; i++)
+        {
+            shift_tlwe[i] = tlwe[i] - sign_tlwe6[i];
+        }
+        my_ImExtractMSB29(res, shift_tlwe, plain_bits - 5, ek, result_type, k);
+    }
     //////////////////////////////////////////////////////////////////////
 
 

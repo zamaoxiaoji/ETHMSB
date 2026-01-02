@@ -78,6 +78,27 @@ namespace HEDB
                 HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
             }
             
+        }else if(plain_bits <= 23){
+            if constexpr (std::is_same_v<P, TFHEpp::lvl2param>) {
+                // 如果 P 是 TFHEpp::lvl2param，可以直接调用 my_ImExtractMSB19
+                my_ImExtractMSB24(res, sub_tlwe, plain_bits +1, ek, result_type, k);
+            }else{
+                HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
+            }
+        }else if(plain_bits <= 28){
+            if constexpr (std::is_same_v<P, TFHEpp::lvl2param>) {
+                // 如果 P 是 TFHEpp::lvl2param，可以直接调用 my_ImExtractMSB19
+                my_ImExtractMSB29(res, sub_tlwe, plain_bits +1, ek, result_type, k);
+            }else{
+                HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
+            }
+        }else if(plain_bits <= 33){
+            if constexpr (std::is_same_v<P, TFHEpp::lvl2param>) {
+                // 如果 P 是 TFHEpp::lvl2param，可以直接调用 my_ImExtractMSB19
+                my_ImExtractMSB34(res, sub_tlwe, plain_bits +1, ek, result_type, k);
+            }else{
+                HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
+            }
         }
         
 
@@ -152,10 +173,27 @@ namespace HEDB
                 HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
             }
             
-        } 
-        else{
-            //cout << "不满足plain_bits <= 8，plain_bits >8 MSB我还没改，还是调老接口" << std::endl;
-            HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
+        } else if(plain_bits <= 23){
+            if constexpr (std::is_same_v<P, TFHEpp::lvl2param>) {
+                // 如果 P 是 TFHEpp::lvl2param，可以直接调用 my_ImExtractMSB19
+                my_ImExtractMSB24(res, sub_tlwe, plain_bits +1, ek, result_type, k);
+            }else{
+                HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
+            }
+        }else if(plain_bits <= 28){
+            if constexpr (std::is_same_v<P, TFHEpp::lvl2param>) {
+                // 如果 P 是 TFHEpp::lvl2param，可以直接调用 my_ImExtractMSB19
+                my_ImExtractMSB29(res, sub_tlwe, plain_bits +1, ek, result_type, k);
+            }else{
+                HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
+            }
+        }else if(plain_bits <= 33){
+            if constexpr (std::is_same_v<P, TFHEpp::lvl2param>) {
+                // 如果 P 是 TFHEpp::lvl2param，可以直接调用 my_ImExtractMSB19
+                my_ImExtractMSB34(res, sub_tlwe, plain_bits +1, ek, result_type, k);
+            }else{
+                HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
+            }
         }
         
         HomNOT<Lvl1>(res, res);
@@ -215,10 +253,27 @@ namespace HEDB
                 HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
             }
             
-        } 
-        else{
-            //cout << "不满足plain_bits <= 8，plain_bits >8 MSB我还没改，还是调老接口" << std::endl;
-            HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
+        }else if(plain_bits <= 23){
+            if constexpr (std::is_same_v<P, TFHEpp::lvl2param>) {
+                // 如果 P 是 TFHEpp::lvl2param，可以直接调用 my_ImExtractMSB19
+                my_ImExtractMSB24(res, sub_tlwe, plain_bits +1, ek, result_type, k);
+            }else{
+                HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
+            }
+        }else if(plain_bits <= 28){
+            if constexpr (std::is_same_v<P, TFHEpp::lvl2param>) {
+                // 如果 P 是 TFHEpp::lvl2param，可以直接调用 my_ImExtractMSB19
+                my_ImExtractMSB29(res, sub_tlwe, plain_bits +1, ek, result_type, k);
+            }else{
+                HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
+            }
+        }else if(plain_bits <= 33){
+            if constexpr (std::is_same_v<P, TFHEpp::lvl2param>) {
+                // 如果 P 是 TFHEpp::lvl2param，可以直接调用 my_ImExtractMSB19
+                my_ImExtractMSB34(res, sub_tlwe, plain_bits +1, ek, result_type, k);
+            }else{
+                HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
+            }
         }
         
         HomNOT<Lvl1>(res, res);
@@ -281,10 +336,27 @@ namespace HEDB
                 HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
             }
             
-        } 
-        else{
-            //cout << "不满足plain_bits <= 8，plain_bits >8 MSB我还没改，还是调老接口" << std::endl;
-            HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
+        }else if(plain_bits <= 23){
+            if constexpr (std::is_same_v<P, TFHEpp::lvl2param>) {
+                // 如果 P 是 TFHEpp::lvl2param，可以直接调用 my_ImExtractMSB19
+                my_ImExtractMSB24(res, sub_tlwe, plain_bits +1, ek, result_type, k);
+            }else{
+                HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
+            }
+        }else if(plain_bits <= 28){
+            if constexpr (std::is_same_v<P, TFHEpp::lvl2param>) {
+                // 如果 P 是 TFHEpp::lvl2param，可以直接调用 my_ImExtractMSB19
+                my_ImExtractMSB29(res, sub_tlwe, plain_bits +1, ek, result_type, k);
+            }else{
+                HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
+            }
+        }else if(plain_bits <= 33){
+            if constexpr (std::is_same_v<P, TFHEpp::lvl2param>) {
+                // 如果 P 是 TFHEpp::lvl2param，可以直接调用 my_ImExtractMSB19
+                my_ImExtractMSB34(res, sub_tlwe, plain_bits +1, ek, result_type, k);
+            }else{
+                HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
+            }
         }
     }
     ////////////////////////////////////////////////////////////////////////

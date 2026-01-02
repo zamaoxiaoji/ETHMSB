@@ -1,6 +1,9 @@
 #include "HEDB/comparison/comparison.h"
 #include "HEDB/utils/utils.h"
 #include "HEDB/conversion/repack.h"
+#ifdef _OPENMP
+#include <omp.h>
+#endif
 
 using namespace HEDB;
 using namespace std;
@@ -16,7 +19,7 @@ using namespace std;
         and l_shipdate < date ':1' + interval '1' year
         and l_discount between :2 - 0.01 and :2 + 0.01
         and l_quantity < :3;
-    
+
     consider data \in [20200101~20221231]
 */
 
@@ -65,7 +68,12 @@ void predicate_evaluation(std::vector<TLWELvl1>& pred_cres, std::vector<uint32_t
     std::cout << "Encrypting Database..." << std::endl;
     std::vector<TLWELvl1> quanlity_ciphers(rows), discount_ciphers(rows);
     std::vector<TLWELvl2> ship_ciphers(rows);
-#pragma omp parallel for num_threads(96)
+
+#ifdef _OPENMP
+    int omp_threads = omp_get_max_threads();
+    bool use_parallel_enc = (rows >= static_cast<size_t>(omp_threads * 4));
+#pragma omp parallel for schedule(static) if(use_parallel_enc) num_threads(omp_threads)
+#endif
     for (size_t i = 0; i < rows; i++)
     {
         quanlity_ciphers[i] = TFHEpp::tlweSymInt32Encrypt<Lvl1>(quanlity_data[i], Lvl1::α, pow(2., quantity_scale_bits),
@@ -114,7 +122,10 @@ void predicate_evaluation(std::vector<TLWELvl1>& pred_cres, std::vector<uint32_t
     std::chrono::system_clock::time_point start, end;
 
     start = std::chrono::system_clock::now();
-#pragma omp parallel for num_threads(96)
+#ifdef _OPENMP
+    bool use_parallel_filter_logic = (rows >= static_cast<size_t>(omp_threads * 2));
+#pragma omp parallel for schedule(static) if(use_parallel_filter_logic) num_threads(omp_threads)
+#endif
     for (size_t i = 0; i < rows; i++)
     {
         greater_than_equal<Lvl2>(ship_ciphers[i], pred_cipher1, pred_cres1[i], ship_bits, ek, LOGIC);
@@ -132,7 +143,10 @@ void predicate_evaluation(std::vector<TLWELvl1>& pred_cres, std::vector<uint32_t
     cout << "original Predicate  Time (s): " << original_filter_time / 1000 << std::endl;
 
     start = std::chrono::system_clock::now();
-#pragma omp parallel for num_threads(96)
+#ifdef _OPENMP
+    bool use_parallel_filter = (rows >= static_cast<size_t>(omp_threads * 2));
+#pragma omp parallel for schedule(static) if(use_parallel_filter) num_threads(omp_threads)
+#endif
     for (size_t i = 0; i < rows; i++)
     {
         my_greater_than_equal<Lvl2>(ship_ciphers[i], pred_cipher1, pred_cres1[i], ship_bits, ek, ARITHMETIC, 28);
@@ -279,43 +293,93 @@ void aggregation(std::vector<TLWELvl1>& pred_cres, std::vector<uint32_t>& pred_r
                      context);
 
 
-    // conversion
+    // conversion (P0: chunked parallel LWEsToRLWE + HomRound)
     std::cout << "Starting Conversion..." << std::endl;
-    seal::Ciphertext result;
-    std::chrono::system_clock::time_point start, end;
-    start = std::chrono::system_clock::now();
-    LWEsToRLWE(result, pred_cres, pre_key, scale, std::pow(2., modq_bits), std::pow(2., modulus_bits - modq_bits),
-               ckks_encoder, galois_keys, relin_keys, evaluator, context);
-    HomRound(result, result.scale(), ckks_encoder, relin_keys, evaluator, decryptor, context);
-    end = std::chrono::system_clock::now();
-    aggregation_time = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
-    LWEsToRLWE_time = aggregation_time;
+    struct ChunkAggRes { seal::Ciphertext cipher; double time_ms = 0.0; };
+    auto convert_chunk = [&](size_t begin, size_t count) -> ChunkAggRes {
+        ChunkAggRes r;
+        seal::CKKSEncoder enc_local(context);
+        seal::Evaluator eval_local(context);
+        seal::Decryptor dec_local(context, seal_secret_key);
+        std::vector<TLWELvl1> slice(pred_cres.begin() + begin, pred_cres.begin() + begin + count);
+        auto t0 = std::chrono::system_clock::now();
+        LWEsToRLWE(r.cipher, slice, pre_key, scale, std::pow(2., modq_bits), std::pow(2., modulus_bits - modq_bits),
+                   enc_local, galois_keys, relin_keys, eval_local, context);
+        HomRound(r.cipher, r.cipher.scale(), enc_local, relin_keys, eval_local, dec_local, context);
+        auto t1 = std::chrono::system_clock::now();
+        r.time_ms = std::chrono::duration_cast<std::chrono::milliseconds>(t1 - t0).count();
+        return r;
+    };
+
+    const size_t chunk_size = 16384;
+    const size_t chunk_count = (rows + chunk_size - 1) / chunk_size;
+    std::vector<ChunkAggRes> chunks(chunk_count);
+
+#ifdef _OPENMP
+    {
+        int omp_threads = omp_get_max_threads();
+        bool use_parallel_chunks = (!omp_in_parallel()) && (chunk_count > 1);
+#pragma omp parallel for schedule(static) if(use_parallel_chunks) num_threads(std::min<int>(omp_threads, (int)chunk_count))
+        for (size_t c = 0; c < chunk_count; ++c)
+        {
+            size_t begin = c * chunk_size;
+            size_t cnt = std::min(chunk_size, rows - begin);
+            chunks[c] = convert_chunk(begin, cnt);
+        }
+    }
+#else
+    for (size_t c = 0; c < chunk_count; ++c)
+    {
+        size_t begin = c * chunk_size;
+        size_t cnt = std::min(chunk_size, rows - begin);
+        chunks[c] = convert_chunk(begin, cnt);
+    }
+#endif
+
+    seal::Ciphertext result = chunks.front().cipher;
+    for (size_t c = 1; c < chunk_count; ++c)
+    {
+        evaluator.add_inplace(result, chunks[c].cipher);
+    }
+    aggregation_time = 0.0;
+    LWEsToRLWE_time = 0.0;
+    for (auto &c : chunks) { aggregation_time += c.time_ms; LWEsToRLWE_time += c.time_ms; }
+
+    // Optional correctness check
     seal::Plaintext plain;
     std::vector<double> computed(slots_count);
     decryptor.decrypt(result, plain);
     seal::pack_decode(computed, plain, ckks_encoder);
-
     double err = 0.;
-
-    for (size_t i = 0; i < slots_count; ++i)
-    {
-        err += std::abs(computed[i] - pred_res[i]);
-    }
+    for (size_t i = 0; i < slots_count; ++i) err += std::abs(computed[i] - pred_res[i]);
     printf("Repack average error = %f ~ 2^%.1f\n", err / slots_count, std::log2(err / slots_count));
 
 
     // Filter result * data
     std::vector<double> price_discount(extendedprice_data.size());
     seal::Ciphertext price_discount_cipher;
+#ifdef _OPENMP
+    {
+        int omp_threads = omp_get_max_threads();
+        bool use_parallel_pd = (rows >= static_cast<size_t>(omp_threads * 16));
+#pragma omp parallel for schedule(static) if(use_parallel_pd) num_threads(omp_threads)
+        for (size_t i = 0; i < rows; i++)
+        {
+            price_discount[i] = extendedprice_data[i] * discount_data_double[i];
+        }
+    }
+#else
     for (size_t i = 0; i < rows; i++)
     {
         price_discount[i] = extendedprice_data[i] * discount_data_double[i];
     }
+#endif
     double qd = parms.coeff_modulus()[result.coeff_modulus_size() - 1].value();
     seal::pack_encode(price_discount, qd, plain, ckks_encoder);
     encryptor.encrypt_symmetric(plain, price_discount_cipher);
 
     std::cout << "Aggregating price and discount .." << std::endl;
+    std::chrono::system_clock::time_point start, end;
     start = std::chrono::system_clock::now();
     seal::multiply_and_relinearize(result, price_discount_cipher, result, evaluator, relin_keys);
     evaluator.rescale_to_next_inplace(result);
@@ -335,10 +399,22 @@ void aggregation(std::vector<TLWELvl1>& pred_cres, std::vector<uint32_t>& pred_r
     decryptor.decrypt(result, plain);
     seal::pack_decode(agg_result, plain, ckks_encoder);
     double plain_result = 0;
+#ifdef _OPENMP
+    {
+        int omp_threads = omp_get_max_threads();
+        bool use_parallel_plain = (rows >= static_cast<size_t>(omp_threads * 16));
+#pragma omp parallel for schedule(static) reduction(+:plain_result) if(use_parallel_plain) num_threads(omp_threads)
+        for (size_t i = 0; i < rows; i++)
+        {
+            plain_result += extendedprice_data[i] * discount_data_double[i] * pred_res[i];
+        }
+    }
+#else
     for (size_t i = 0; i < rows; i++)
     {
         plain_result += extendedprice_data[i] * discount_data_double[i] * pred_res[i];
     }
+#endif
     cout << "Plain_result: " << plain_result << endl;
     cout << "Encrypted query result: " << std::round(agg_result[0]) << endl;
     cout << "LWEsToRLWE_time: " << LWEsToRLWE_time / 1000 << "s" << endl;
@@ -397,9 +473,9 @@ int main()
     //cout << "32k rows: " << endl;
     // query_evaluation(1000);
     // query_evaluation(6000);
-    // query_evaluation(1024);
-    // query_evaluation(4096);
-    // query_evaluation(8192);
-    query_evaluation(16384);
+    query_evaluation(1024);
+    query_evaluation(4096);
+    query_evaluation(8192);
+    query_evaluation(32768);
     // query_evaluation(16);
 }

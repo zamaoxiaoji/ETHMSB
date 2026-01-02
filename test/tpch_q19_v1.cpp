@@ -1,6 +1,9 @@
 #include "HEDB/comparison/comparison.h"
 #include "HEDB/utils/utils.h"
 #include "HEDB/conversion/repack.h"
+#ifdef _OPENMP
+#include <omp.h>
+#endif
 
 using namespace HEDB;
 using namespace std;
@@ -16,7 +19,7 @@ where
     p_partkey = l_partkey
     and p_brand = ‘[BRAND1]’ /*特定品牌。BRAND1、BRAND2、BRAND3＝‘Brand＃MN’，M和N是两个字母，代表两个数值，相互独立，取值在1到5之间
     and p_container in ( ‘SM CASE’, ‘SM BOX’, ‘SM PACK’, ‘SM PKG’) //包装范围
-    and l_quantity >= [QUANTITY1] and l_quantity <= [QUANTITY1] + 10 /* QUANTITY1 是1到10之间的任意取值 
+    and l_quantity >= [QUANTITY1] and l_quantity <= [QUANTITY1] + 10 /* QUANTITY1 是1到10之间的任意取值
     and p_size between 1 and 5 //尺寸范围
     and l_shipmode in (‘AIR’, ‘AIR REG’) //运输模式，可以是(AIR, AIR REG, SHIP, SHIP REG, TRUCK, TRUCK REG, RAIL, RAIL REG)
     and l_shipinstruct = ‘DELIVER IN PERSON’ //运输指令，可以是（DELIVER IN PERSON，COLLECT COD，SHIP BY AIR，SHIP BY RAIL，SHIP BY TRUCK，PICKUP）
@@ -26,7 +29,7 @@ or
     p_partkey = l_partkey
     and p_brand = ‘[BRAND2]’
     and p_container in (‘MED BAG’, ‘MED BOX’, ‘MED PKG’, ‘MED PACK’)
-    and l_quantity >= [QUANTITY2] and l_quantity <= [QUANTITY2] + 10 /* QUANTITY2 是10到20之间的任意取值 
+    and l_quantity >= [QUANTITY2] and l_quantity <= [QUANTITY2] + 10 /* QUANTITY2 是10到20之间的任意取值
     and p_size between 1 and 10
     and l_shipmode in (‘AIR’, ‘AIR REG’)
     and l_shipinstruct = ‘DELIVER IN PERSON’
@@ -36,9 +39,9 @@ or
     p_partkey = l_partkey
     and p_brand = ‘[BRAND3]’
     and p_container in ( ‘LG CASE’, ‘LG BOX’, ‘LG PACK’, ‘LG PKG’)
-    and l_quantity >= [QUANTITY3] and l_quantity <= [QUANTITY3] + 10 /* QUANTITY3 是20到30之间的任意取值 
+    and l_quantity >= [QUANTITY3] and l_quantity <= [QUANTITY3] + 10 /* QUANTITY3 是20到30之间的任意取值
     and p_size between 1 and 15
-    and l_shipmode in (‘AIR’, ‘AIR REG’)    
+    and l_shipmode in (‘AIR’, ‘AIR REG’)
     and l_shipinstruct = ‘DELIVER IN PERSON’
 );
 */
@@ -104,6 +107,11 @@ void predicate_evaluation(std::vector<TLWELvl1>& pred_cres, std::vector<uint32_t
     std::vector<TLWELvl1> l_shipinstruct_ciphers(rows);
     std::vector<TLWELvl2> l_partkey_ciphers(rows), p_partkey_ciphers(rows);
 
+#ifdef _OPENMP
+    int omp_threads = omp_get_max_threads();
+    bool use_parallel_enc = (rows >= static_cast<size_t>(omp_threads * 4));
+#pragma omp parallel for schedule(static) if(use_parallel_enc) num_threads(omp_threads)
+#endif
     for (size_t i = 0; i < rows; i++)
     {
         p_brand_ciphers[i] = TFHEpp::tlweSymInt32Encrypt<Lvl1>(p_brand_data[i], Lvl1::α, pow(2., p_brand_scale_bits),
@@ -282,6 +290,187 @@ void predicate_evaluation(std::vector<TLWELvl1>& pred_cres, std::vector<uint32_t
     TLWELvl1 c_6 = TFHEpp::tlweSymInt32Encrypt<Lvl1>(6, Lvl1::α, pow(2., 28), sk.key.get<Lvl1>());
     std::chrono::system_clock::time_point start, end;
     start = std::chrono::system_clock::now();
+#ifdef _OPENMP
+    {
+        int omp_threads = omp_get_max_threads();
+        bool use_parallel_filter = (rows >= static_cast<size_t>(omp_threads * 2));
+#pragma omp parallel for schedule(static) if(use_parallel_filter) num_threads(omp_threads)
+        for (size_t i = 0; i < rows; i++)
+        {
+            my_equal<Lvl2>(l_partkey_ciphers[i], p_partkey_ciphers[i], partkey_cres[i], c_1, l_partkey_bits, ek, ARITHMETIC,
+                           28);
+
+            my_equal<Lvl1>(p_brand_ciphers[i], pred_brand1_cipher, brand_cres[i], c_1, p_brand_bits, ek, ARITHMETIC, 28);
+
+            my_equal<Lvl1>(p_container_ciphers[i], pred_container1_cipher[0], container_cres[i], c_1, p_container_bits, ek,
+                           ARITHMETIC, 28);
+            pred_cres_add[i] = container_cres[i];
+            for (uint32_t j = 1; j < 4; j++)
+            {
+                my_equal<Lvl1>(p_container_ciphers[i], pred_container1_cipher[j], temp_cres[i], c_1, p_container_bits, ek,
+                               ARITHMETIC, 28);
+                for (int k = 0; k <= Lvl1::n; k++)
+                {
+                    pred_cres_add[i][k] = pred_cres_add[i][k] + temp_cres[i][k];
+                }
+            }
+            my_greater_than<Lvl1>(pred_cres_add[i], c_0, container_cres[i], 3, ek, ARITHMETIC, 28);
+
+
+            my_greater_than_equal<Lvl1>(l_quantity_ciphers[i], pred_quantity1_left_cipher, quantity_cres1[i],
+                                        l_quantity_bits, ek, ARITHMETIC, 28);
+            my_less_than_equal<Lvl1>(l_quantity_ciphers[i], pred_quantity1_right_cipher, quantity_cres2[i], l_quantity_bits,
+                                     ek, ARITHMETIC, 28);
+            for (int k = 0; k <= Lvl1::n; k++)
+            {
+                pred_cres_add[i][k] = quantity_cres1[i][k] + quantity_cres2[i][k];
+            }
+            my_greater_than<Lvl1>(pred_cres_add[i], c_1, quantity_cres[i], 3, ek, ARITHMETIC, 28);
+
+            my_greater_than_equal<Lvl1>(p_size_ciphers[i], pred_size1_left_cipher, size_cres1[i], p_size_bits, ek,
+                                        ARITHMETIC, 28);
+            my_less_than_equal<Lvl1>(p_size_ciphers[i], pred_size1_right_cipher, size_cres2[i], p_size_bits, ek, ARITHMETIC,
+                                     28);
+            for (int k = 0; k <= Lvl1::n; k++)
+            {
+                pred_cres_add[i][k] = size_cres1[i][k] + size_cres2[i][k];
+            }
+            my_greater_than<Lvl1>(pred_cres_add[i], c_1, size_cres[i], 3, ek, ARITHMETIC, 28);
+
+            my_equal<Lvl1>(l_shipmode_ciphers[i], pred_shipmode_cipher[0], shipmode_cres[i], c_1, l_shipmode_bits, ek,
+                           ARITHMETIC, 28);
+            my_equal<Lvl1>(l_shipmode_ciphers[i], pred_shipmode_cipher[1], temp_cres[i], c_1, l_shipmode_bits, ek,
+                           ARITHMETIC, 28);
+            for (int k = 0; k <= Lvl1::n; k++)
+            {
+                pred_cres_add[i][k] = shipmode_cres[i][k] + temp_cres[i][k];
+            }
+            my_greater_than<Lvl1>(pred_cres_add[i], c_0, shipmode_cres[i], 3, ek, ARITHMETIC, 28);
+
+            my_equal<Lvl1>(l_shipinstruct_ciphers[i], pred_shipinstruct_cipher, shipinstruct_cres[i], c_1,
+                           l_shipinstruct_bits, ek, ARITHMETIC, 28);
+
+            for (int k = 0; k <= Lvl1::n; k++)
+            {
+                pred_cres_add[i][k] = partkey_cres[i][k] + brand_cres[i][k] + container_cres[i][k] + quantity_cres[i][k] +
+                    size_cres[i][k]
+                    + shipmode_cres[i][k] + shipinstruct_cres[i][k];
+            }
+            my_greater_than<Lvl1>(pred_cres_add[i], c_6, pred_cres1[i], 3, ek, ARITHMETIC, 28);
+
+            // pred 2
+            my_equal<Lvl2>(l_partkey_ciphers[i], p_partkey_ciphers[i], partkey_cres[i], c_1, l_partkey_bits, ek, ARITHMETIC,
+                           28);
+            my_equal<Lvl1>(p_brand_ciphers[i], pred_brand2_cipher, brand_cres[i], c_1, p_brand_bits, ek, ARITHMETIC, 28);
+            my_equal<Lvl1>(p_container_ciphers[i], pred_container2_cipher[0], container_cres[i], c_1, p_container_bits, ek,
+                           ARITHMETIC, 28);
+            pred_cres_add[i] = container_cres[i];
+            for (uint32_t j = 1; j < 4; j++)
+            {
+                my_equal<Lvl1>(p_container_ciphers[i], pred_container2_cipher[j], temp_cres[i], c_1, p_container_bits, ek,
+                               ARITHMETIC, 28);
+                for (int k = 0; k <= Lvl1::n; k++)
+                {
+                    pred_cres_add[i][k] = pred_cres_add[i][k] + temp_cres[i][k];
+                }
+            }
+            my_greater_than<Lvl1>(pred_cres_add[i], c_0, container_cres[i], 3, ek, ARITHMETIC, 28);
+            my_greater_than_equal<Lvl1>(l_quantity_ciphers[i], pred_quantity2_left_cipher, quantity_cres1[i],
+                                        l_quantity_bits, ek, ARITHMETIC, 28);
+            my_less_than_equal<Lvl1>(l_quantity_ciphers[i], pred_quantity2_right_cipher, quantity_cres2[i], l_quantity_bits,
+                                     ek, ARITHMETIC, 28);
+            for (int k = 0; k <= Lvl1::n; k++)
+            {
+                pred_cres_add[i][k] = quantity_cres1[i][k] + quantity_cres2[i][k];
+            }
+            my_greater_than<Lvl1>(pred_cres_add[i], c_1, quantity_cres[i], 3, ek, ARITHMETIC, 28);
+            my_greater_than_equal<Lvl1>(p_size_ciphers[i], pred_size2_left_cipher, size_cres1[i], p_size_bits, ek,
+                                        ARITHMETIC, 28);
+            my_less_than_equal<Lvl1>(p_size_ciphers[i], pred_size2_right_cipher, size_cres2[i], p_size_bits, ek, ARITHMETIC,
+                                     28);
+            for (int k = 0; k <= Lvl1::n; k++)
+            {
+                pred_cres_add[i][k] = size_cres1[i][k] + size_cres2[i][k];
+            }
+            my_greater_than<Lvl1>(pred_cres_add[i], c_1, size_cres[i], 3, ek, ARITHMETIC, 28);
+            my_equal<Lvl1>(l_shipmode_ciphers[i], pred_shipmode_cipher[0], shipmode_cres[i], c_1, l_shipmode_bits, ek,
+                           ARITHMETIC, 28);
+            my_equal<Lvl1>(l_shipmode_ciphers[i], pred_shipmode_cipher[1], temp_cres[i], c_1, l_shipmode_bits, ek,
+                           ARITHMETIC, 28);
+            for (int k = 0; k <= Lvl1::n; k++)
+            {
+                pred_cres_add[i][k] = shipmode_cres[i][k] + temp_cres[i][k];
+            }
+            my_greater_than<Lvl1>(pred_cres_add[i], c_0, shipmode_cres[i], 3, ek, ARITHMETIC, 28);
+            my_equal<Lvl1>(l_shipinstruct_ciphers[i], pred_shipinstruct_cipher, shipinstruct_cres[i], c_1,
+                           l_shipinstruct_bits, ek, ARITHMETIC, 28);
+            for (int k = 0; k <= Lvl1::n; k++)
+            {
+                pred_cres_add[i][k] = partkey_cres[i][k] + brand_cres[i][k] + container_cres[i][k] + quantity_cres[i][k] +
+                    size_cres[i][k]
+                    + shipmode_cres[i][k] + shipinstruct_cres[i][k];
+            }
+            my_greater_than<Lvl1>(pred_cres_add[i], c_6, pred_cres2[i], 3, ek, ARITHMETIC, 28);
+
+            // pred 3
+            my_equal<Lvl2>(l_partkey_ciphers[i], p_partkey_ciphers[i], partkey_cres[i], c_1, l_partkey_bits, ek, ARITHMETIC,
+                           28);
+            my_equal<Lvl1>(p_brand_ciphers[i], pred_brand3_cipher, brand_cres[i], c_1, p_brand_bits, ek, ARITHMETIC, 28);
+            my_equal<Lvl1>(p_container_ciphers[i], pred_container3_cipher[0], container_cres[i], c_1, p_container_bits, ek,
+                           ARITHMETIC, 28);
+            pred_cres_add[i] = container_cres[i];
+            for (uint32_t j = 1; j < 4; j++)
+            {
+                my_equal<Lvl1>(p_container_ciphers[i], pred_container3_cipher[j], temp_cres[i], c_1, p_container_bits, ek,
+                               ARITHMETIC, 28);
+                for (int k = 0; k <= Lvl1::n; k++)
+                {
+                    pred_cres_add[i][k] = pred_cres_add[i][k] + temp_cres[i][k];
+                }
+            }
+            my_greater_than<Lvl1>(pred_cres_add[i], c_0, container_cres[i], 3, ek, ARITHMETIC, 28);
+            my_greater_than_equal<Lvl1>(l_quantity_ciphers[i], pred_quantity3_left_cipher, quantity_cres1[i],
+                                        l_quantity_bits, ek, ARITHMETIC, 28);
+            my_less_than_equal<Lvl1>(l_quantity_ciphers[i], pred_quantity3_right_cipher, quantity_cres2[i], l_quantity_bits,
+                                     ek, ARITHMETIC, 28);
+            for (int k = 0; k <= Lvl1::n; k++)
+            {
+                pred_cres_add[i][k] = quantity_cres1[i][k] + quantity_cres2[i][k];
+            }
+            my_greater_than<Lvl1>(pred_cres_add[i], c_1, quantity_cres[i], 3, ek, ARITHMETIC, 28);
+            my_greater_than_equal<Lvl1>(p_size_ciphers[i], pred_size3_left_cipher, size_cres1[i], p_size_bits, ek,
+                                        ARITHMETIC, 28);
+            my_less_than_equal<Lvl1>(p_size_ciphers[i], pred_size3_right_cipher, size_cres2[i], p_size_bits, ek, ARITHMETIC,
+                                     28);
+            for (int k = 0; k <= Lvl1::n; k++)
+            {
+                pred_cres_add[i][k] = size_cres1[i][k] + size_cres2[i][k];
+            }
+            my_greater_than<Lvl1>(pred_cres_add[i], c_1, size_cres[i], 3, ek, ARITHMETIC, 28);
+            my_equal<Lvl1>(l_shipmode_ciphers[i], pred_shipmode_cipher[0], shipmode_cres[i], c_1, l_shipmode_bits, ek,
+                           ARITHMETIC, 28);
+            my_equal<Lvl1>(l_shipmode_ciphers[i], pred_shipmode_cipher[1], temp_cres[i], c_1, l_shipmode_bits, ek,
+                           ARITHMETIC, 28);
+            for (int k = 0; k <= Lvl1::n; k++)
+            {
+                pred_cres_add[i][k] = shipmode_cres[i][k] + temp_cres[i][k];
+            }
+            my_greater_than<Lvl1>(pred_cres_add[i], c_0, shipmode_cres[i], 3, ek, ARITHMETIC, 28);
+            my_equal<Lvl1>(l_shipinstruct_ciphers[i], pred_shipinstruct_cipher, shipinstruct_cres[i], c_1,
+                           l_shipinstruct_bits, ek, ARITHMETIC, 28);
+            for (int k = 0; k <= Lvl1::n; k++)
+            {
+                pred_cres_add[i][k] = partkey_cres[i][k] + brand_cres[i][k] + container_cres[i][k] + quantity_cres[i][k] +
+                    size_cres[i][k]
+                    + shipmode_cres[i][k] + shipinstruct_cres[i][k];
+            }
+            my_greater_than<Lvl1>(pred_cres_add[i], c_6, pred_cres3[i], 3, ek, ARITHMETIC, 28);
+
+            my_HomAND(pred_cres[i], pred_cres1[i], pred_cres2[i], c_1, ek, ARITHMETIC, 29);
+            my_HomAND(pred_cres[i], pred_cres[i], pred_cres3[i], c_1, ek, ARITHMETIC, 29);
+        }
+    }
+#else
     for (size_t i = 0; i < rows; i++)
     {
         my_equal<Lvl2>(l_partkey_ciphers[i], p_partkey_ciphers[i], partkey_cres[i], c_1, l_partkey_bits, ek, ARITHMETIC,
@@ -478,6 +667,7 @@ void predicate_evaluation(std::vector<TLWELvl1>& pred_cres, std::vector<uint32_t
         }
         my_greater_than<Lvl1>(pred_cres_add[i], c_0, pred_cres[i], 3, ek, ARITHMETIC, 29);
     }
+#endif
     end = std::chrono::system_clock::now();
     std::vector<uint32_t> pred_cres_total_de(rows), pred_cres_part_de(rows), pred_cres1_de(rows), pred_cres2_de(rows),
                           pred_cres3_de(rows), pred_cres4_de(rows), pred_cres5_de(rows);
@@ -564,28 +754,65 @@ void aggregation(std::vector<TLWELvl1>& pred_cres, std::vector<uint32_t>& pred_r
                      context);
 
 
-    // conversion
+    // conversion (P0: chunked parallel LWEsToRLWE + HomRound)
     std::cout << "Starting Conversion..." << std::endl;
-    seal::Ciphertext result;
-    std::chrono::system_clock::time_point start, end;
-    start = std::chrono::system_clock::now();
-    LWEsToRLWE(result, pred_cres, pre_key, scale, std::pow(2., modq_bits), std::pow(2., modulus_bits - modq_bits),
-               ckks_encoder, galois_keys, relin_keys, evaluator, context);
-    HomRound(result, result.scale(), ckks_encoder, relin_keys, evaluator, decryptor, context);
-    end = std::chrono::system_clock::now();
-    aggregation_time = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+
+    struct ChunkAggRes { seal::Ciphertext cipher; double time_ms = 0.0; };
+    auto convert_chunk = [&](size_t begin, size_t count) -> ChunkAggRes {
+        ChunkAggRes r;
+        seal::CKKSEncoder enc_local(context);
+        seal::Evaluator eval_local(context);
+        seal::Decryptor dec_local(context, seal_secret_key);
+        std::vector<TLWELvl1> slice(pred_cres.begin() + begin, pred_cres.begin() + begin + count);
+        auto t0 = std::chrono::system_clock::now();
+        LWEsToRLWE(r.cipher, slice, pre_key, scale, std::pow(2., modq_bits), std::pow(2., modulus_bits - modq_bits),
+                   enc_local, galois_keys, relin_keys, eval_local, context);
+        HomRound(r.cipher, r.cipher.scale(), enc_local, relin_keys, eval_local, dec_local, context);
+        auto t1 = std::chrono::system_clock::now();
+        r.time_ms = std::chrono::duration_cast<std::chrono::milliseconds>(t1 - t0).count();
+        return r;
+    };
+
+    const size_t chunk_size = 16384;
+    const size_t chunk_count = (rows + chunk_size - 1) / chunk_size;
+    std::vector<ChunkAggRes> chunks(chunk_count);
+
+#ifdef _OPENMP
+    {
+        int omp_threads = omp_get_max_threads();
+        bool use_parallel_chunks = (!omp_in_parallel()) && (chunk_count > 1);
+#pragma omp parallel for schedule(static) if(use_parallel_chunks) num_threads(std::min<int>(omp_threads, (int)chunk_count))
+        for (size_t c = 0; c < chunk_count; ++c)
+        {
+            size_t begin = c * chunk_size;
+            size_t cnt = std::min(chunk_size, rows - begin);
+            chunks[c] = convert_chunk(begin, cnt);
+        }
+    }
+#else
+    for (size_t c = 0; c < chunk_count; ++c)
+    {
+        size_t begin = c * chunk_size;
+        size_t cnt = std::min(chunk_size, rows - begin);
+        chunks[c] = convert_chunk(begin, cnt);
+    }
+#endif
+
+    seal::Ciphertext result = chunks.front().cipher;
+    for (size_t c = 1; c < chunk_count; ++c)
+    {
+        evaluator.add_inplace(result, chunks[c].cipher);
+    }
+    aggregation_time = 0.0;
+    for (auto &c : chunks) aggregation_time += c.time_ms;
+
+    // Optional correctness check
     seal::Plaintext plain;
     std::vector<double> computed(slots_count);
     decryptor.decrypt(result, plain);
     seal::pack_decode(computed, plain, ckks_encoder);
-
     double err = 0.;
-
-    for (size_t i = 0; i < slots_count; ++i)
-    {
-        err += std::abs(computed[i] - pred_res[i]);
-    }
-
+    for (size_t i = 0; i < slots_count; ++i) err += std::abs(computed[i] - pred_res[i]);
     printf("Repack average error = %f ~ 2^%.1f\n", err / slots_count, std::log2(err / slots_count));
 
 
@@ -601,6 +828,7 @@ void aggregation(std::vector<TLWELvl1>& pred_cres, std::vector<uint32_t>& pred_r
     encryptor.encrypt_symmetric(plain, price_discount_cipher);
 
     std::cout << "Aggregating price and discount .." << std::endl;
+    std::chrono::system_clock::time_point start, end;
     start = std::chrono::system_clock::now();
     seal::multiply_and_relinearize(result, price_discount_cipher, result, evaluator, relin_keys);
     evaluator.rescale_to_next_inplace(result);
