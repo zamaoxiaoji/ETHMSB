@@ -56,3 +56,5 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
+# ignore ccls-cache 
+.ccls-cache/

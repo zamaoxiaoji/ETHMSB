@@ -1,0 +1,956 @@
+[
+{
+  "directory": "/home/wrn/HE3DB/build",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/HEDB.dir/src/HEDB/comparison/extract_msb.cpp.o -c /home/wrn/HE3DB/src/HEDB/comparison/extract_msb.cpp",
+  "file": "/home/wrn/HE3DB/src/HEDB/comparison/extract_msb.cpp",
+  "output": "CMakeFiles/HEDB.dir/src/HEDB/comparison/extract_msb.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/HEDB.dir/src/HEDB/comparison/HomCompare.cpp.o -c /home/wrn/HE3DB/src/HEDB/comparison/HomCompare.cpp",
+  "file": "/home/wrn/HE3DB/src/HEDB/comparison/HomCompare.cpp",
+  "output": "CMakeFiles/HEDB.dir/src/HEDB/comparison/HomCompare.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/HEDB.dir/src/HEDB/comparison/operators.cpp.o -c /home/wrn/HE3DB/src/HEDB/comparison/operators.cpp",
+  "file": "/home/wrn/HE3DB/src/HEDB/comparison/operators.cpp",
+  "output": "CMakeFiles/HEDB.dir/src/HEDB/comparison/operators.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/HEDB.dir/src/HEDB/comparison/tfhepp_utils.cpp.o -c /home/wrn/HE3DB/src/HEDB/comparison/tfhepp_utils.cpp",
+  "file": "/home/wrn/HE3DB/src/HEDB/comparison/tfhepp_utils.cpp",
+  "output": "CMakeFiles/HEDB.dir/src/HEDB/comparison/tfhepp_utils.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/HEDB.dir/src/HEDB/conversion/repack.cpp.o -c /home/wrn/HE3DB/src/HEDB/conversion/repack.cpp",
+  "file": "/home/wrn/HE3DB/src/HEDB/conversion/repack.cpp",
+  "output": "CMakeFiles/HEDB.dir/src/HEDB/conversion/repack.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/HEDB.dir/src/HEDB/conversion/polyeval_bsgs.cpp.o -c /home/wrn/HE3DB/src/HEDB/conversion/polyeval_bsgs.cpp",
+  "file": "/home/wrn/HE3DB/src/HEDB/conversion/polyeval_bsgs.cpp",
+  "output": "CMakeFiles/HEDB.dir/src/HEDB/conversion/polyeval_bsgs.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/HEDB.dir/src/HEDB/conversion/seal_util.cpp.o -c /home/wrn/HE3DB/src/HEDB/conversion/seal_util.cpp",
+  "file": "/home/wrn/HE3DB/src/HEDB/conversion/seal_util.cpp",
+  "output": "CMakeFiles/HEDB.dir/src/HEDB/conversion/seal_util.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/HEDB.dir/src/HEDB/utils/serialize.cpp.o -c /home/wrn/HE3DB/src/HEDB/utils/serialize.cpp",
+  "file": "/home/wrn/HE3DB/src/HEDB/utils/serialize.cpp",
+  "output": "CMakeFiles/HEDB.dir/src/HEDB/utils/serialize.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/TFHEpp/thirdparties/spqlios",
+  "command": "/usr/bin/c++ -DUSE_RANDEN -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -O3 -DNDEBUG -o CMakeFiles/spqlios.dir/spqlios-fft-fma.s.o -c /home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios/spqlios-fft-fma.s",
+  "file": "/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios/spqlios-fft-fma.s",
+  "output": "thirdparty/TFHEpp/thirdparties/spqlios/CMakeFiles/spqlios.dir/spqlios-fft-fma.s.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/TFHEpp/thirdparties/spqlios",
+  "command": "/usr/bin/c++ -DUSE_RANDEN -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -O3 -DNDEBUG -o CMakeFiles/spqlios.dir/spqlios-ifft-fma.s.o -c /home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios/spqlios-ifft-fma.s",
+  "file": "/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios/spqlios-ifft-fma.s",
+  "output": "thirdparty/TFHEpp/thirdparties/spqlios/CMakeFiles/spqlios.dir/spqlios-ifft-fma.s.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/TFHEpp/thirdparties/spqlios",
+  "command": "/usr/bin/c++ -DUSE_RANDEN -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -march=native -O3 -g -funroll-loops -Wall -Wextra -pedantic -Wno-sign-compare -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/spqlios.dir/fft_processor_spqlios.cpp.o -c /home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios/fft_processor_spqlios.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios/fft_processor_spqlios.cpp",
+  "output": "thirdparty/TFHEpp/thirdparties/spqlios/CMakeFiles/spqlios.dir/fft_processor_spqlios.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/TFHEpp/thirdparties/spqlios",
+  "command": "/usr/bin/c++ -DUSE_RANDEN -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -march=native -O3 -g -funroll-loops -Wall -Wextra -pedantic -Wno-sign-compare -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/spqlios.dir/spqlios-fft-impl.cpp.o -c /home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios/spqlios-fft-impl.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios/spqlios-fft-impl.cpp",
+  "output": "thirdparty/TFHEpp/thirdparties/spqlios/CMakeFiles/spqlios.dir/spqlios-fft-impl.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/TFHEpp/thirdparties/randen",
+  "command": "/usr/bin/c++ -DUSE_RANDEN  -march=native -O3 -g -funroll-loops -Wall -Wextra -pedantic -Wno-sign-compare -fopenmp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/randen.dir/randen.cc.o -c /home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen/randen.cc",
+  "file": "/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen/randen.cc",
+  "output": "thirdparty/TFHEpp/thirdparties/randen/CMakeFiles/randen.dir/randen.cc.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/TFHEpp/src",
+  "command": "/usr/bin/c++ -DUSE_RANDEN -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -march=native -O3 -g -funroll-loops -Wall -Wextra -pedantic -Wno-sign-compare -fopenmp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/tfhe++.dir/circuitbootstrapping.cpp.o -c /home/wrn/HE3DB/thirdparty/TFHEpp/src/circuitbootstrapping.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/TFHEpp/src/circuitbootstrapping.cpp",
+  "output": "thirdparty/TFHEpp/src/CMakeFiles/tfhe++.dir/circuitbootstrapping.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/TFHEpp/src",
+  "command": "/usr/bin/c++ -DUSE_RANDEN -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -march=native -O3 -g -funroll-loops -Wall -Wextra -pedantic -Wno-sign-compare -fopenmp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/tfhe++.dir/cloudkey.cpp.o -c /home/wrn/HE3DB/thirdparty/TFHEpp/src/cloudkey.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/TFHEpp/src/cloudkey.cpp",
+  "output": "thirdparty/TFHEpp/src/CMakeFiles/tfhe++.dir/cloudkey.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/TFHEpp/src",
+  "command": "/usr/bin/c++ -DUSE_RANDEN -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -march=native -O3 -g -funroll-loops -Wall -Wextra -pedantic -Wno-sign-compare -fopenmp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/tfhe++.dir/detwfa.cpp.o -c /home/wrn/HE3DB/thirdparty/TFHEpp/src/detwfa.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/TFHEpp/src/detwfa.cpp",
+  "output": "thirdparty/TFHEpp/src/CMakeFiles/tfhe++.dir/detwfa.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/TFHEpp/src",
+  "command": "/usr/bin/c++ -DUSE_RANDEN -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -march=native -O3 -g -funroll-loops -Wall -Wextra -pedantic -Wno-sign-compare -fopenmp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/tfhe++.dir/gate.cpp.o -c /home/wrn/HE3DB/thirdparty/TFHEpp/src/gate.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/TFHEpp/src/gate.cpp",
+  "output": "thirdparty/TFHEpp/src/CMakeFiles/tfhe++.dir/gate.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/TFHEpp/src",
+  "command": "/usr/bin/c++ -DUSE_RANDEN -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -march=native -O3 -g -funroll-loops -Wall -Wextra -pedantic -Wno-sign-compare -fopenmp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/tfhe++.dir/gatebootstrapping.cpp.o -c /home/wrn/HE3DB/thirdparty/TFHEpp/src/gatebootstrapping.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/TFHEpp/src/gatebootstrapping.cpp",
+  "output": "thirdparty/TFHEpp/src/CMakeFiles/tfhe++.dir/gatebootstrapping.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/TFHEpp/src",
+  "command": "/usr/bin/c++ -DUSE_RANDEN -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -march=native -O3 -g -funroll-loops -Wall -Wextra -pedantic -Wno-sign-compare -fopenmp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/tfhe++.dir/key.cpp.o -c /home/wrn/HE3DB/thirdparty/TFHEpp/src/key.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/TFHEpp/src/key.cpp",
+  "output": "thirdparty/TFHEpp/src/CMakeFiles/tfhe++.dir/key.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/TFHEpp/src",
+  "command": "/usr/bin/c++ -DUSE_RANDEN -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -march=native -O3 -g -funroll-loops -Wall -Wextra -pedantic -Wno-sign-compare -fopenmp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/tfhe++.dir/keyswitch.cpp.o -c /home/wrn/HE3DB/thirdparty/TFHEpp/src/keyswitch.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/TFHEpp/src/keyswitch.cpp",
+  "output": "thirdparty/TFHEpp/src/CMakeFiles/tfhe++.dir/keyswitch.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/TFHEpp/src",
+  "command": "/usr/bin/c++ -DUSE_RANDEN -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -march=native -O3 -g -funroll-loops -Wall -Wextra -pedantic -Wno-sign-compare -fopenmp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/tfhe++.dir/tlwe.cpp.o -c /home/wrn/HE3DB/thirdparty/TFHEpp/src/tlwe.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/TFHEpp/src/tlwe.cpp",
+  "output": "thirdparty/TFHEpp/src/CMakeFiles/tfhe++.dir/tlwe.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/TFHEpp/src",
+  "command": "/usr/bin/c++ -DUSE_RANDEN -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -march=native -O3 -g -funroll-loops -Wall -Wextra -pedantic -Wno-sign-compare -fopenmp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/tfhe++.dir/trgsw.cpp.o -c /home/wrn/HE3DB/thirdparty/TFHEpp/src/trgsw.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/TFHEpp/src/trgsw.cpp",
+  "output": "thirdparty/TFHEpp/src/CMakeFiles/tfhe++.dir/trgsw.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/TFHEpp/src",
+  "command": "/usr/bin/c++ -DUSE_RANDEN -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -march=native -O3 -g -funroll-loops -Wall -Wextra -pedantic -Wno-sign-compare -fopenmp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/tfhe++.dir/trlwe.cpp.o -c /home/wrn/HE3DB/thirdparty/TFHEpp/src/trlwe.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/TFHEpp/src/trlwe.cpp",
+  "output": "thirdparty/TFHEpp/src/CMakeFiles/tfhe++.dir/trlwe.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/batchencoder.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/batchencoder.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/batchencoder.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/batchencoder.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/ciphertext.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/ciphertext.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/ciphertext.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/ciphertext.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/ckks.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/ckks.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/ckks.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/ckks.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/context.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/context.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/context.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/context.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/decryptor.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/decryptor.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/decryptor.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/decryptor.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/encryptionparams.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/encryptionparams.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/encryptionparams.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/encryptionparams.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/encryptor.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/encryptor.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/encryptor.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/encryptor.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/evaluator.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/evaluator.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/evaluator.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/evaluator.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/keygenerator.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/keygenerator.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/keygenerator.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/keygenerator.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/kswitchkeys.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/kswitchkeys.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/kswitchkeys.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/kswitchkeys.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/memorymanager.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/memorymanager.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/memorymanager.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/memorymanager.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/modulus.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/modulus.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/modulus.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/modulus.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/plaintext.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/plaintext.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/plaintext.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/plaintext.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/randomgen.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/randomgen.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/randomgen.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/randomgen.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/serialization.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/serialization.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/serialization.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/serialization.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/valcheck.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/valcheck.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/valcheck.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/valcheck.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/cc  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -O3 -DNDEBUG -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/blake2b.c.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/blake2b.c",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/blake2b.c",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/blake2b.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/cc  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -O3 -DNDEBUG -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/blake2xb.c.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/blake2xb.c",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/blake2xb.c",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/blake2xb.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/clipnormal.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/clipnormal.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/clipnormal.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/clipnormal.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/common.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/common.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/common.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/common.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/croots.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/croots.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/croots.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/croots.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/cc  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -O3 -DNDEBUG -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/fips202.c.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/fips202.c",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/fips202.c",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/fips202.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/globals.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/globals.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/globals.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/globals.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/galois.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/galois.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/galois.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/galois.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/hash.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/hash.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/hash.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/hash.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/iterator.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/iterator.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/iterator.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/iterator.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/mempool.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/mempool.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/mempool.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/mempool.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/numth.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/numth.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/numth.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/numth.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/polyarithsmallmod.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/polyarithsmallmod.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/polyarithsmallmod.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/polyarithsmallmod.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/rlwe.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/rlwe.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/rlwe.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/rlwe.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/rns.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/rns.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/rns.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/rns.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/scalingvariant.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/scalingvariant.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/scalingvariant.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/scalingvariant.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/ntt.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/ntt.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/ntt.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/ntt.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/streambuf.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/streambuf.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/streambuf.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/streambuf.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/uintarith.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/uintarith.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/uintarith.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/uintarith.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/uintarithmod.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/uintarithmod.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/uintarithmod.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/uintarithmod.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/uintarithsmallmod.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/uintarithsmallmod.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/uintarithsmallmod.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/uintarithsmallmod.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/uintcore.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/uintcore.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/uintcore.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/uintcore.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common -march=native -O3 -funroll-loops -O3 -DNDEBUG -std=gnu++20 -fPIC -o CMakeFiles/seal.dir/native/src/seal/util/ztools.cpp.o -c /home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/ztools.cpp",
+  "file": "/home/wrn/HE3DB/thirdparty/SEAL/native/src/seal/util/ztools.cpp",
+  "output": "thirdparty/SEAL/CMakeFiles/seal.dir/native/src/seal/util/ztools.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlibstatic.dir/adler32.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/adler32.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/adler32.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlibstatic.dir/adler32.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlibstatic.dir/compress.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/compress.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/compress.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlibstatic.dir/compress.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlibstatic.dir/crc32.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/crc32.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/crc32.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlibstatic.dir/crc32.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlibstatic.dir/deflate.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/deflate.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/deflate.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlibstatic.dir/deflate.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlibstatic.dir/gzclose.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/gzclose.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/gzclose.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlibstatic.dir/gzclose.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlibstatic.dir/gzlib.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/gzlib.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/gzlib.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlibstatic.dir/gzlib.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlibstatic.dir/gzread.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/gzread.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/gzread.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlibstatic.dir/gzread.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlibstatic.dir/gzwrite.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/gzwrite.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/gzwrite.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlibstatic.dir/gzwrite.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlibstatic.dir/inflate.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/inflate.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/inflate.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlibstatic.dir/inflate.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlibstatic.dir/infback.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/infback.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/infback.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlibstatic.dir/infback.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlibstatic.dir/inftrees.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/inftrees.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/inftrees.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlibstatic.dir/inftrees.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlibstatic.dir/inffast.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/inffast.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/inffast.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlibstatic.dir/inffast.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlibstatic.dir/trees.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/trees.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/trees.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlibstatic.dir/trees.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlibstatic.dir/uncompr.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/uncompr.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/uncompr.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlibstatic.dir/uncompr.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlibstatic.dir/zutil.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/zutil.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/zutil.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlibstatic.dir/zutil.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -DZLIB_DLL -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlib.dir/adler32.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/adler32.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/adler32.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlib.dir/adler32.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -DZLIB_DLL -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlib.dir/compress.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/compress.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/compress.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlib.dir/compress.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -DZLIB_DLL -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlib.dir/crc32.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/crc32.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/crc32.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlib.dir/crc32.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -DZLIB_DLL -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlib.dir/deflate.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/deflate.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/deflate.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlib.dir/deflate.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -DZLIB_DLL -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlib.dir/gzclose.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/gzclose.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/gzclose.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlib.dir/gzclose.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -DZLIB_DLL -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlib.dir/gzlib.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/gzlib.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/gzlib.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlib.dir/gzlib.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -DZLIB_DLL -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlib.dir/gzread.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/gzread.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/gzread.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlib.dir/gzread.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -DZLIB_DLL -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlib.dir/gzwrite.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/gzwrite.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/gzwrite.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlib.dir/gzwrite.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -DZLIB_DLL -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlib.dir/inflate.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/inflate.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/inflate.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlib.dir/inflate.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -DZLIB_DLL -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlib.dir/infback.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/infback.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/infback.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlib.dir/infback.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -DZLIB_DLL -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlib.dir/inftrees.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/inftrees.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/inftrees.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlib.dir/inftrees.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -DZLIB_DLL -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlib.dir/inffast.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/inffast.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/inffast.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlib.dir/inffast.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -DZLIB_DLL -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlib.dir/trees.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/trees.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/trees.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlib.dir/trees.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -DZLIB_DLL -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlib.dir/uncompr.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/uncompr.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/uncompr.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlib.dir/uncompr.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -DZLIB_DLL -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIC -o CMakeFiles/zlib.dir/zutil.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/zutil.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/zutil.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/zlib.dir/zutil.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIE -o CMakeFiles/example.dir/test/example.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/test/example.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/test/example.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/example.dir/test/example.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIE -o CMakeFiles/minigzip.dir/test/minigzip.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/test/minigzip.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/test/minigzip.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/minigzip.dir/test/minigzip.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIE -D_FILE_OFFSET_BITS=64 -o CMakeFiles/example64.dir/test/example.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/test/example.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/test/example.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/example64.dir/test/example.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build",
+  "command": "/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-build -I/home/wrn/HE3DB -O3 -DNDEBUG -fPIE -D_FILE_OFFSET_BITS=64 -o CMakeFiles/minigzip64.dir/test/minigzip.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/test/minigzip.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zlib-src/test/minigzip.c",
+  "output": "thirdparty/SEAL/thirdparty/zlib-build/CMakeFiles/minigzip64.dir/test/minigzip.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/common/debug.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common/debug.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common/debug.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/debug.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/common/entropy_common.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common/entropy_common.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common/entropy_common.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/entropy_common.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/common/error_private.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common/error_private.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common/error_private.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/error_private.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/common/fse_decompress.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common/fse_decompress.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common/fse_decompress.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/fse_decompress.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/common/pool.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common/pool.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common/pool.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/pool.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/common/threading.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common/threading.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common/threading.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/threading.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/common/xxhash.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common/xxhash.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common/xxhash.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/xxhash.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/common/zstd_common.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common/zstd_common.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/common/zstd_common.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/zstd_common.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/fse_compress.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/fse_compress.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/fse_compress.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/fse_compress.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/hist.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/hist.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/hist.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/hist.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/huf_compress.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/huf_compress.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/huf_compress.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/huf_compress.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_compress.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstd_compress.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstd_compress.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_compress.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_compress_literals.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstd_compress_literals.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstd_compress_literals.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_compress_literals.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_compress_sequences.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstd_compress_sequences.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstd_compress_sequences.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_compress_sequences.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_compress_superblock.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstd_compress_superblock.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstd_compress_superblock.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_compress_superblock.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_double_fast.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstd_double_fast.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstd_double_fast.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_double_fast.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_fast.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstd_fast.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstd_fast.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_fast.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_lazy.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstd_lazy.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstd_lazy.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_lazy.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_ldm.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstd_ldm.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstd_ldm.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_ldm.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_opt.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstd_opt.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstd_opt.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_opt.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstdmt_compress.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstdmt_compress.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/compress/zstdmt_compress.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstdmt_compress.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/decompress/huf_decompress.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/decompress/huf_decompress.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/decompress/huf_decompress.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/decompress/huf_decompress.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/decompress/zstd_ddict.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/decompress/zstd_ddict.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/decompress/zstd_ddict.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/decompress/zstd_ddict.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/decompress/zstd_decompress.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/decompress/zstd_decompress.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/decompress/zstd_decompress.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/decompress/zstd_decompress.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/decompress/zstd_decompress_block.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/decompress/zstd_decompress_block.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/decompress/zstd_decompress_block.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/decompress/zstd_decompress_block.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/dictBuilder/cover.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/dictBuilder/cover.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/dictBuilder/cover.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/dictBuilder/cover.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/dictBuilder/divsufsort.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/dictBuilder/divsufsort.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/dictBuilder/divsufsort.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/dictBuilder/divsufsort.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/dictBuilder/fastcover.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/dictBuilder/fastcover.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/dictBuilder/fastcover.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/dictBuilder/fastcover.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/dictBuilder/zdict.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/dictBuilder/zdict.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/dictBuilder/zdict.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/dictBuilder/zdict.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/deprecated/zbuff_common.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/deprecated/zbuff_common.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/deprecated/zbuff_common.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/deprecated/zbuff_common.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/deprecated/zbuff_compress.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/deprecated/zbuff_compress.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/deprecated/zbuff_compress.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/deprecated/zbuff_compress.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib",
+  "command": "/usr/bin/cc -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-build/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/build/cmake/../../lib/common  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O3 -DNDEBUG -fPIC -o CMakeFiles/libzstd_static.dir/__/__/__/lib/deprecated/zbuff_decompress.c.o -c /home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/deprecated/zbuff_decompress.c",
+  "file": "/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/zstd-src/lib/deprecated/zbuff_decompress.c",
+  "output": "thirdparty/SEAL/thirdparty/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/deprecated/zbuff_decompress.c.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/comparison_test.dir/comparison_test.cpp.o -c /home/wrn/HE3DB/test/comparison_test.cpp",
+  "file": "/home/wrn/HE3DB/test/comparison_test.cpp",
+  "output": "test/CMakeFiles/comparison_test.dir/comparison_test.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/conversion_test.dir/conversion_test.cpp.o -c /home/wrn/HE3DB/test/conversion_test.cpp",
+  "file": "/home/wrn/HE3DB/test/conversion_test.cpp",
+  "output": "test/CMakeFiles/conversion_test.dir/conversion_test.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/tpch_q6.dir/tpch_q6.cpp.o -c /home/wrn/HE3DB/test/tpch_q6.cpp",
+  "file": "/home/wrn/HE3DB/test/tpch_q6.cpp",
+  "output": "test/CMakeFiles/tpch_q6.dir/tpch_q6.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/tpch_q6_copy.dir/tpch_q6_copy.cpp.o -c /home/wrn/HE3DB/test/tpch_q6_copy.cpp",
+  "file": "/home/wrn/HE3DB/test/tpch_q6_copy.cpp",
+  "output": "test/CMakeFiles/tpch_q6_copy.dir/tpch_q6_copy.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/comparison_test_copy.dir/comparison_test_copy.cpp.o -c /home/wrn/HE3DB/test/comparison_test_copy.cpp",
+  "file": "/home/wrn/HE3DB/test/comparison_test_copy.cpp",
+  "output": "test/CMakeFiles/comparison_test_copy.dir/comparison_test_copy.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/comparison_test_tl.dir/comparison_test_tl.cpp.o -c /home/wrn/HE3DB/test/comparison_test_tl.cpp",
+  "file": "/home/wrn/HE3DB/test/comparison_test_tl.cpp",
+  "output": "test/CMakeFiles/comparison_test_tl.dir/comparison_test_tl.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/tpch_q6_mytest1.dir/tpch_q6_mytest1.cpp.o -c /home/wrn/HE3DB/test/tpch_q6_mytest1.cpp",
+  "file": "/home/wrn/HE3DB/test/tpch_q6_mytest1.cpp",
+  "output": "test/CMakeFiles/tpch_q6_mytest1.dir/tpch_q6_mytest1.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/add_test.dir/add_test.cpp.o -c /home/wrn/HE3DB/test/add_test.cpp",
+  "file": "/home/wrn/HE3DB/test/add_test.cpp",
+  "output": "test/CMakeFiles/add_test.dir/add_test.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/add_replace_and_test.dir/add_replace_and_test.cpp.o -c /home/wrn/HE3DB/test/add_replace_and_test.cpp",
+  "file": "/home/wrn/HE3DB/test/add_replace_and_test.cpp",
+  "output": "test/CMakeFiles/add_replace_and_test.dir/add_replace_and_test.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/tpch_q6_mytest_v1.dir/tpch_q6_mytest_v1.cpp.o -c /home/wrn/HE3DB/test/tpch_q6_mytest_v1.cpp",
+  "file": "/home/wrn/HE3DB/test/tpch_q6_mytest_v1.cpp",
+  "output": "test/CMakeFiles/tpch_q6_mytest_v1.dir/tpch_q6_mytest_v1.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/tpch_q6_mytest_v2.dir/tpch_q6_mytest_v2.cpp.o -c /home/wrn/HE3DB/test/tpch_q6_mytest_v2.cpp",
+  "file": "/home/wrn/HE3DB/test/tpch_q6_mytest_v2.cpp",
+  "output": "test/CMakeFiles/tpch_q6_mytest_v2.dir/tpch_q6_mytest_v2.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/tpch_q6_mytest_v3.dir/tpch_q6_mytest_v3.cpp.o -c /home/wrn/HE3DB/test/tpch_q6_mytest_v3.cpp",
+  "file": "/home/wrn/HE3DB/test/tpch_q6_mytest_v3.cpp",
+  "output": "test/CMakeFiles/tpch_q6_mytest_v3.dir/tpch_q6_mytest_v3.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/tpch_q6_mytest_v4.dir/tpch_q6_mytest_v4.cpp.o -c /home/wrn/HE3DB/test/tpch_q6_mytest_v4.cpp",
+  "file": "/home/wrn/HE3DB/test/tpch_q6_mytest_v4.cpp",
+  "output": "test/CMakeFiles/tpch_q6_mytest_v4.dir/tpch_q6_mytest_v4.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/tpch_q6_mytest_v5.dir/tpch_q6_mytest_v5.cpp.o -c /home/wrn/HE3DB/test/tpch_q6_mytest_v5.cpp",
+  "file": "/home/wrn/HE3DB/test/tpch_q6_mytest_v5.cpp",
+  "output": "test/CMakeFiles/tpch_q6_mytest_v5.dir/tpch_q6_mytest_v5.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/lwe_mul.dir/lwe_mul.cpp.o -c /home/wrn/HE3DB/test/lwe_mul.cpp",
+  "file": "/home/wrn/HE3DB/test/lwe_mul.cpp",
+  "output": "test/CMakeFiles/lwe_mul.dir/lwe_mul.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/tpch_q14.dir/tpch_q14.cpp.o -c /home/wrn/HE3DB/test/tpch_q14.cpp",
+  "file": "/home/wrn/HE3DB/test/tpch_q14.cpp",
+  "output": "test/CMakeFiles/tpch_q14.dir/tpch_q14.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/tpch_q14_v1.dir/tpch_q14_v1.cpp.o -c /home/wrn/HE3DB/test/tpch_q14_v1.cpp",
+  "file": "/home/wrn/HE3DB/test/tpch_q14_v1.cpp",
+  "output": "test/CMakeFiles/tpch_q14_v1.dir/tpch_q14_v1.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/tpch_q14_v0.dir/tpch_q14_v0.cpp.o -c /home/wrn/HE3DB/test/tpch_q14_v0.cpp",
+  "file": "/home/wrn/HE3DB/test/tpch_q14_v0.cpp",
+  "output": "test/CMakeFiles/tpch_q14_v0.dir/tpch_q14_v0.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/tpch_q14_v0_copy.dir/tpch_q14_v0_copy.cpp.o -c /home/wrn/HE3DB/test/tpch_q14_v0_copy.cpp",
+  "file": "/home/wrn/HE3DB/test/tpch_q14_v0_copy.cpp",
+  "output": "test/CMakeFiles/tpch_q14_v0_copy.dir/tpch_q14_v0_copy.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/add_test_copy.dir/add_test_copy.cpp.o -c /home/wrn/HE3DB/test/add_test_copy.cpp",
+  "file": "/home/wrn/HE3DB/test/add_test_copy.cpp",
+  "output": "test/CMakeFiles/add_test_copy.dir/add_test_copy.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/nested_cmux_from_cb.dir/nested_cmux_from_cb.cpp.o -c /home/wrn/HE3DB/test/nested_cmux_from_cb.cpp",
+  "file": "/home/wrn/HE3DB/test/nested_cmux_from_cb.cpp",
+  "output": "test/CMakeFiles/nested_cmux_from_cb.dir/nested_cmux_from_cb.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/tpch_q19.dir/tpch_q19.cpp.o -c /home/wrn/HE3DB/test/tpch_q19.cpp",
+  "file": "/home/wrn/HE3DB/test/tpch_q19.cpp",
+  "output": "test/CMakeFiles/tpch_q19.dir/tpch_q19.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/tpch_q19_v1.dir/tpch_q19_v1.cpp.o -c /home/wrn/HE3DB/test/tpch_q19_v1.cpp",
+  "file": "/home/wrn/HE3DB/test/tpch_q19_v1.cpp",
+  "output": "test/CMakeFiles/tpch_q19_v1.dir/tpch_q19_v1.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/distinct_test.dir/distinct_test.cpp.o -c /home/wrn/HE3DB/test/distinct_test.cpp",
+  "file": "/home/wrn/HE3DB/test/distinct_test.cpp",
+  "output": "test/CMakeFiles/distinct_test.dir/distinct_test.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/distinct_test_v2.dir/distinct_test_v2.cpp.o -c /home/wrn/HE3DB/test/distinct_test_v2.cpp",
+  "file": "/home/wrn/HE3DB/test/distinct_test_v2.cpp",
+  "output": "test/CMakeFiles/distinct_test_v2.dir/distinct_test_v2.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/distinct_test_v3.dir/distinct_test_v3.cpp.o -c /home/wrn/HE3DB/test/distinct_test_v3.cpp",
+  "file": "/home/wrn/HE3DB/test/distinct_test_v3.cpp",
+  "output": "test/CMakeFiles/distinct_test_v3.dir/distinct_test_v3.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/new_test.dir/new_test.cpp.o -c /home/wrn/HE3DB/test/new_test.cpp",
+  "file": "/home/wrn/HE3DB/test/new_test.cpp",
+  "output": "test/CMakeFiles/new_test.dir/new_test.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/new_test2.dir/new_test2.cpp.o -c /home/wrn/HE3DB/test/new_test2.cpp",
+  "file": "/home/wrn/HE3DB/test/new_test2.cpp",
+  "output": "test/CMakeFiles/new_test2.dir/new_test2.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/test",
+  "command": "/usr/bin/c++  -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/com_test.dir/com_test.cpp.o -c /home/wrn/HE3DB/test/com_test.cpp",
+  "file": "/home/wrn/HE3DB/test/com_test.cpp",
+  "output": "test/CMakeFiles/com_test.dir/com_test.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/experiments",
+  "command": "/usr/bin/c++ -DUSE_RANDEN -I/home/wrn/HE3DB -I/home/wrn/HE3DB/src -I/home/wrn/HE3DB/thirdparty/SEAL/natice/src -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -I/home/wrn/HE3DB/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/native/src -I/home/wrn/HE3DB/build/thirdparty/SEAL/thirdparty/msgsl-src/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/msb5_fail_trace.dir/msb5_fail_trace.cpp.o -c /home/wrn/HE3DB/experiments/msb5_fail_trace.cpp",
+  "file": "/home/wrn/HE3DB/experiments/msb5_fail_trace.cpp",
+  "output": "experiments/CMakeFiles/msb5_fail_trace.dir/msb5_fail_trace.cpp.o"
+},
+{
+  "directory": "/home/wrn/HE3DB/build/experiments",
+  "command": "/usr/bin/c++ -DUSE_RANDEN -I/home/wrn/HE3DB -I/home/wrn/HE3DB/thirdparty/TFHEpp/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqlios -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/fftw -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/spqliox_aarch64/xbyak_aarch64/xbyak_aarch64 -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/hexl/hexl/hexl/include -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/randen -I/home/wrn/HE3DB/thirdparty/TFHEpp/thirdparties/cereal/include -march=native -O3 -funroll-loops -fopenmp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/msb_wraparound_experiment.dir/msb_wraparound_experiment.cpp.o -c /home/wrn/HE3DB/experiments/msb_wraparound_experiment.cpp",
+  "file": "/home/wrn/HE3DB/experiments/msb_wraparound_experiment.cpp",
+  "output": "experiments/CMakeFiles/msb_wraparound_experiment.dir/msb_wraparound_experiment.cpp.o"
+}
+]
