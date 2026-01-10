@@ -321,22 +321,25 @@ void LWEsToRLWE(seal::Ciphertext &result, std::vector<TLWELvl1> &lwe_ciphers,
   double K = 41;
   double multiplier = 1 / K;
 
-  for (size_t i = 0; i < num_lwe_ciphers; i++) {
-    TLWELvl1 negate_tlwe = lwe_ciphers[i];
-    A[i] = std::vector<double>(Lvl1::n);
-    // The default ciphertext format in TFHEpp is
-    // Change (a, a*s + m + e) to (-a, a*s + m + e), so the decryption is b + a
-    // * s
-    for (size_t i = 0; i < Lvl1::k * Lvl1::n; i++) {
-      negate_tlwe[i] = -negate_tlwe[i];
-    }
+	  for (size_t lwe_idx = 0; lwe_idx < num_lwe_ciphers; ++lwe_idx) {
+	    TLWELvl1 negate_tlwe = lwe_ciphers[lwe_idx];
+	    A[lwe_idx] = std::vector<double>(Lvl1::n);
+	    // The default ciphertext format in TFHEpp is
+	    // Change (a, a*s + m + e) to (-a, a*s + m + e), so the decryption is b + a
+	    // * s
+	    for (size_t j = 0; j < Lvl1::k * Lvl1::n; ++j) {
+	      negate_tlwe[j] = -negate_tlwe[j];
+	    }
 
-    std::transform(negate_tlwe.begin(), negate_tlwe.end(), A[i].begin(),
-                   [K, rescale](uint32_t value) {
-                     return (static_cast<int32_t>(value)) * rescale / K;
-                   });
-    b[i] = static_cast<int32_t>(lwe_ciphers[i][Lvl1::n]) * multiplier * rescale;
-  }
+	    std::transform(negate_tlwe.begin(),
+	                   negate_tlwe.begin() + (Lvl1::k * Lvl1::n),
+	                   A[lwe_idx].begin(),
+	                   [K, rescale](uint32_t value) {
+	                     return (static_cast<int32_t>(value)) * rescale / K;
+	                   });
+	    b[lwe_idx] = static_cast<int32_t>(lwe_ciphers[lwe_idx][Lvl1::n]) *
+	                 multiplier * rescale;
+	  }
   // 2. Linear Transform A * s
   LinearTranform(result, A, 1.0, eval_key, encoder, galois_keys, evaluator);
   evaluator.rescale_to_next_inplace(result);
@@ -369,21 +372,23 @@ void LWEsToRLWE(seal::Ciphertext &result, std::vector<TLWELvl2> &lwe_ciphers,
   double K = 41;
   double multiplier = 1 / K;
 
-  for (size_t i = 0; i < num_lwe_ciphers; i++) {
-    TLWELvl2 negate_tlwe = lwe_ciphers[i];
-    A[i] = std::vector<double>(Lvl2::n);
-    // The default ciphertext format in TFHEpp is
-    // Change (a, a*s + m + e) to (-a, a*s + m + e), so the decryption is b + a
-    // * s
-    for (size_t i = 0; i < Lvl2::k * Lvl2::n; i++) {
-      negate_tlwe[i] = -negate_tlwe[i];
-    }
+	  for (size_t lwe_idx = 0; lwe_idx < num_lwe_ciphers; ++lwe_idx) {
+	    TLWELvl2 negate_tlwe = lwe_ciphers[lwe_idx];
+	    A[lwe_idx] = std::vector<double>(Lvl2::n);
+	    // The default ciphertext format in TFHEpp is
+	    // Change (a, a*s + m + e) to (-a, a*s + m + e), so the decryption is b + a
+	    // * s
+	    for (size_t j = 0; j < Lvl2::k * Lvl2::n; ++j) {
+	      negate_tlwe[j] = -negate_tlwe[j];
+	    }
 
-    std::transform(
-        negate_tlwe.begin(), negate_tlwe.end(), A[i].begin(),
-        [K](uint64_t value) { return (static_cast<int64_t>(value)) / K; });
-    b[i] = static_cast<int64_t>(lwe_ciphers[i][Lvl2::n]) * multiplier;
-  }
+	    std::transform(
+	        negate_tlwe.begin(), negate_tlwe.begin() + (Lvl2::k * Lvl2::n),
+	        A[lwe_idx].begin(),
+	        [K](uint64_t value) { return (static_cast<int64_t>(value)) / K; });
+	    b[lwe_idx] =
+	        static_cast<int64_t>(lwe_ciphers[lwe_idx][Lvl2::n]) * multiplier;
+	  }
 
   // 2. Linear Transform A * s
   LinearTranform(result, A, 1.0, eval_key, encoder, galois_keys, evaluator);

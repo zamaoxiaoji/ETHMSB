@@ -398,7 +398,11 @@ namespace TFHEpp
     void MSBGateBootstrapping(TLWE<lvl1param> &res, const TLWE<lvl1param> &tlwe, const EvalKey &ek, bool result_type);
     
     ////////////加的///////////
-    void my_MSBGateBootstrapping(TLWE<lvl1param> &res, const TLWE<lvl1param> &tlwe, const EvalKey &ek, bool result_type, uint32_t k);
+    void my_MSBGateBootstrapping(TLWE<lvl1param> &res,
+                                 const TLWE<lvl1param> &tlwe,
+                                 const EvalKey &ek, bool result_type, uint32_t k,
+                                 uint32_t plain_bits_eff = 5,
+                                 bool use_gap_offset = false);
     void my_MSBGateBootstrapping(TLWE<lvl2param> &res, const TLWE<lvl2param> &tlwe, const EvalKey &ek, bool result_type, uint32_t k);
     void my_MSBGateBootstrapping_2(TLWE<lvl1param> &res, const TLWE<lvl1param> &tlwe, const EvalKey &ek, bool result_type, uint32_t k);
     void Multi_HomAND(std::vector<TLWE<lvl1param>> &arr_ciphers, TLWE<lvl1param> &res, TLWE<lvl1param> &k_1, const EvalKey &ek, uint32_t out_bit );

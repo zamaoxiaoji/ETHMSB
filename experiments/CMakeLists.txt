@@ -19,3 +19,8 @@ add_executable(msb_timing_bench msb_timing_bench.cpp)
 target_link_libraries(msb_timing_bench HEDB)
 target_include_directories(msb_timing_bench PRIVATE ${CMAKE_SOURCE_DIR})
 target_compile_definitions(msb_timing_bench PRIVATE USE_RANDEN)
+
+add_executable(msb_delta_half_fail_trace msb_delta_half_fail_trace.cpp)
+target_link_libraries(msb_delta_half_fail_trace HEDB)
+target_include_directories(msb_delta_half_fail_trace PRIVATE ${CMAKE_SOURCE_DIR})
+target_compile_definitions(msb_delta_half_fail_trace PRIVATE USE_RANDEN)

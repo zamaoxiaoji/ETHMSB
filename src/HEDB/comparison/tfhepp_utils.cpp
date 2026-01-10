@@ -97,15 +97,20 @@ namespace TFHEpp
     }
     
     ////////////////////////////////////////////////////////////////////////
-    void my_MSBGateBootstrapping(TLWE<lvl1param> &res, const TLWE<lvl1param> &tlwe, const EvalKey &ek, bool result_type, uint32_t k)
-    {
-        
-        lvl1param::T μ = 1U << 29;
-        if(IS_LOGIC(result_type)) μ = (μ << 2) >> k;
+	void my_MSBGateBootstrapping(TLWE<lvl1param> &res, const TLWE<lvl1param> &tlwe, const EvalKey &ek, bool result_type, uint32_t k,uint32_t plain_bits_eff,bool use_gap_offset)
+	    {
+	        
+	        lvl1param::T μ = 1U << 29;
+	        if(IS_LOGIC(result_type)) μ = (μ << 2) >> k;
         if (IS_ARITHMETIC(result_type)) μ = (μ << 1) >> k;
         //μ = (μ << 1) >> k;
-        uint64_t offset = 1ULL << (std::numeric_limits<lvl1param::T>::digits - 6);
-        offset = (3*offset)/4 ;
+        constexpr uint32_t q = std::numeric_limits<lvl1param::T>::digits;
+        const uint64_t base = 1ULL << (q - plain_bits_eff - 1);
+        uint64_t offset = base;
+        if (use_gap_offset) {
+        constexpr uint32_t guard_k = 4;                      // 强制 guard 在 bit4
+        offset = ((1ULL << guard_k) + 1ULL) * base;          // 17 * base
+        }
         
         TLWE<lvl1param> tlweoffset = tlwe;
         tlweoffset[lvl1param::k * lvl1param::n] += offset;
@@ -115,13 +120,28 @@ namespace TFHEpp
         
         GateBootstrappingTLWE2TLWEFFT<lvl01param>(res, tlwelvl0, *ek.bkfftlvl01, μ_polygen<lvl1param>(μ));
         
-        if (IS_ARITHMETIC(result_type)) res[lvl1param::k * lvl1param::n] += (μ);
-    }
+	        if (IS_ARITHMETIC(result_type)) res[lvl1param::k * lvl1param::n] += (μ);
+	    }
 
-    /// 测试验证用的
-    void my_MSBGateBootstrapping_2(TLWE<lvl1param> &res, const TLWE<lvl1param> &tlwe, const EvalKey &ek, bool result_type, uint32_t k)
-    {
-        
+	    void my_MSBGateBootstrapping(TLWE<lvl2param> &res, const TLWE<lvl2param> &tlwe, const EvalKey &ek, bool result_type, uint32_t k)
+	    {
+	        uint64_t μ = 1ULL << 61;
+	        if(IS_LOGIC(result_type)) μ = (μ << 2) >> k;
+	        if (IS_ARITHMETIC(result_type)) μ = (μ << 1) >> k;
+	        //μ = (μ << 1) >> k;
+	        constexpr uint64_t offset = 1ULL << (std::numeric_limits<lvl2param::T>::digits - 7);
+	        TLWE<lvl2param> tlweoffset = tlwe;
+	        tlweoffset[lvl2param::k * lvl2param::n] += offset;
+	        TLWE<lvl0param> tlwelvl0;
+	        IdentityKeySwitch<lvl20param>(tlwelvl0, tlweoffset, *ek.iksklvl20);
+	        GateBootstrappingTLWE2TLWEFFT<lvl02param>(res, tlwelvl0, *ek.bkfftlvl02, μ_polygen<lvl2param>(μ));
+	        if (IS_ARITHMETIC(result_type)) res[lvl2param::k * lvl2param::n] += μ;
+	    }
+
+	    /// 测试验证用的
+	    void my_MSBGateBootstrapping_2(TLWE<lvl1param> &res, const TLWE<lvl1param> &tlwe, const EvalKey &ek, bool result_type, uint32_t k)
+	    {
+	        
         uint32_t μ = 1U << 29;
         //if (IS_ARITHMETIC(result_type)) μ = μ << 1;
         μ = (μ << 1) >> k;
@@ -134,24 +154,9 @@ namespace TFHEpp
         
         GateBootstrappingTLWE2TLWEFFT<lvl01param>(res, tlwelvl0, *ek.bkfftlvl01, μ_polygen<lvl1param>(-μ));
         
-        if (IS_ARITHMETIC(result_type)) res[lvl1param::k * lvl1param::n] += (μ);
-    }
-
-    void my_MSBGateBootstrapping(TLWE<lvl2param> &res, const TLWE<lvl2param> &tlwe, const EvalKey &ek, bool result_type, uint32_t k)
-    {
-        uint64_t μ = 1ULL << 61;
-        if(IS_LOGIC(result_type)) μ = (μ << 2) >> k;
-        if (IS_ARITHMETIC(result_type)) μ = (μ << 1) >> k;
-        //μ = (μ << 1) >> k;
-        constexpr uint64_t offset = 1ULL << (std::numeric_limits<lvl2param::T>::digits - 7);
-        TLWE<lvl2param> tlweoffset = tlwe;
-        tlweoffset[lvl2param::k * lvl2param::n] += offset;
-        TLWE<lvl0param> tlwelvl0;
-        IdentityKeySwitch<lvl20param>(tlwelvl0, tlweoffset, *ek.iksklvl20);
-        GateBootstrappingTLWE2TLWEFFT<lvl02param>(res, tlwelvl0, *ek.bkfftlvl02, μ_polygen<lvl2param>(μ));
-        if (IS_ARITHMETIC(result_type)) res[lvl2param::k * lvl2param::n] += μ;
-    }
-    ////////////////////////////////////////////////////////////////////////
+	        if (IS_ARITHMETIC(result_type)) res[lvl1param::k * lvl1param::n] += (μ);
+	    }
+	    ////////////////////////////////////////////////////////////////////////
 
     // ARI 0 / 1/2, LOG 1/8 , -1/8
     void MSBGateBootstrapping(TLWE<lvl1param> &res, const TLWE<lvl1param> &tlwe, const EvalKey &ek, bool result_type)

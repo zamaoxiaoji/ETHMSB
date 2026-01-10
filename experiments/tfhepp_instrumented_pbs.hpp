@@ -84,6 +84,86 @@ typename DomainP::T tlwe_phase_exact(const TFHEpp::TLWE<DomainP> &tlwe,
 
 }  // namespace detail
 
+// Compute the same quantized indices used by BlindRotate (qb/ai_q path),
+// WITHOUT running any CMUX/FFT operations. This is useful for collecting
+// statistics of modulus switching / carry(wrap-around) behavior efficiently.
+//
+// The definitions are consistent with TFHEpp::BlindRotate:
+//   shift_bs = digits(domainT) - 1 - targetP::nbit + bitwidth
+//   roundoffset = 1 << (digits(domainT) - 2 - targetP::nbit + bitwidth)
+//   qb = ((b >> shift_bs) << bitwidth)
+//   ai_q = (((a_i + roundoffset) >> shift_bs) << bitwidth)
+//   sum_ai_s = Σ(ai_q * s_i) mod MOD, MOD=(2N)<<bitwidth
+//   q_phase_parts  = (qb - sum_ai_s) mod MOD
+//   q_phase_direct = ((phase_exact >> shift_bs) << bitwidth) mod MOD
+template <class P, uint32_t num_out = 1>
+TraceRecord QuantizePhaseRecord(const TFHEpp::TLWE<typename P::domainP> &tlwe,
+                                const TFHEpp::Key<typename P::domainP> &sk,
+                                uint32_t t, uint64_t m, uint64_t seed)
+{
+    TraceRecord rec;
+    rec.t = t;
+    rec.m = m;
+    rec.seed = seed;
+
+    constexpr uint32_t bitwidth = TFHEpp::bits_needed<num_out - 1>();
+    constexpr uint32_t shift_bs =
+        std::numeric_limits<typename P::domainP::T>::digits - 1 -
+        P::targetP::nbit + bitwidth;
+
+    const uint64_t mod = (2ULL * static_cast<uint64_t>(P::targetP::n))
+                         << bitwidth;
+    const uint64_t half = (static_cast<uint64_t>(P::targetP::n) << bitwidth);
+
+    rec.bitwidth = bitwidth;
+    rec.shift_bs = shift_bs;
+    rec.mod = mod;
+    rec.half = half;
+    rec.roundoffset = static_cast<uint64_t>(
+        1ULL << (std::numeric_limits<typename P::domainP::T>::digits - 2 -
+                 P::targetP::nbit + bitwidth));
+
+    const uint32_t qb = static_cast<uint32_t>(
+        (tlwe[P::domainP::k * P::domainP::n] >> shift_bs) << bitwidth);
+    const uint32_t bbar = 2 * P::targetP::n - qb;
+    rec.qb = qb;
+    rec.bbar = bbar;
+
+    uint32_t nonzero_cnt = 0;
+    uint64_t sum_ai_s = 0;
+    for (int i = 0; i < P::domainP::k * P::domainP::n; ++i) {
+        const uint32_t ai_q =
+            static_cast<uint32_t>(((tlwe[i] + rec.roundoffset) >> shift_bs)
+                                  << bitwidth);
+        if (ai_q == 0) continue;
+        ++nonzero_cnt;
+        const uint32_t s_i = static_cast<uint32_t>(sk[i]);
+        sum_ai_s = (sum_ai_s +
+                    (static_cast<uint64_t>(ai_q) * static_cast<uint64_t>(s_i))) %
+                   mod;
+    }
+    rec.nonzero_ai_q_total = nonzero_cnt;
+    rec.sum_ai_s = sum_ai_s;
+
+    const typename P::domainP::T phase_exact =
+        detail::tlwe_phase_exact<typename P::domainP>(tlwe, sk);
+    const uint64_t q_phase_direct = static_cast<uint64_t>(
+        static_cast<uint32_t>((phase_exact >> shift_bs) << bitwidth)) % mod;
+    const uint64_t q_phase_parts =
+        detail::mod_u64(static_cast<int64_t>(qb) - static_cast<int64_t>(sum_ai_s),
+                        mod);
+    const uint64_t rot_exponent =
+        (static_cast<uint64_t>(bbar) + sum_ai_s) % mod;
+    const int64_t diff_centered =
+        detail::centered_diff_u64(q_phase_parts, q_phase_direct, mod);
+
+    rec.q_phase_direct = q_phase_direct;
+    rec.q_phase_parts = q_phase_parts;
+    rec.q_phase_diff_centered = diff_centered;
+    rec.rot_exponent = rot_exponent;
+    return rec;
+}
+
 // Copied from: thirdparty/TFHEpp/include/gatebootstrapping.hpp
 // Original name: TFHEpp::BlindRotate (FFT + Polynomial testvector)
 // We only add optional tracing/recording controlled by (cfg, rec).

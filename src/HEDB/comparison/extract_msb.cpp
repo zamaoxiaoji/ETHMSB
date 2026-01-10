@@ -19,7 +19,7 @@ namespace HEDB
         {
             shift_tlwe[i] = tlwe[i] << (plain_bits - 5);
         }
-        my_MSBGateBootstrapping(sign_tlwe5, shift_tlwe, ek, ARITHMETIC, plain_bits - 5);
+        my_MSBGateBootstrapping(sign_tlwe5, shift_tlwe, ek, ARITHMETIC, plain_bits - 5,5, false);
         
         for (size_t i = 0; i <= Lvl1 :: n; i++)
         {
@@ -27,7 +27,7 @@ namespace HEDB
         }
         
         //my_MSBGateBootstrapping(res, res, ek, ARITHMETIC, (plain_bits - 5) +1);
-        my_MSBGateBootstrapping(res, res, ek, result_type, (31-k));
+        my_MSBGateBootstrapping(res, res, ek, result_type, (31-k),plain_bits,true);
     }
 
     void my_ImExtractMSB5(TLWELvl1 &res, const TLWELvl2 &tlwe, uint32_t plain_bits, const TFHEEvalKey &ek, bool result_type, uint32_t k)

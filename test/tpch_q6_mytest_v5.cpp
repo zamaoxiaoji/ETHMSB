@@ -474,8 +474,9 @@ int main()
     // query_evaluation(1000);
     // query_evaluation(6000);
     query_evaluation(1024);
+    query_evaluation(2048);
     query_evaluation(4096);
     query_evaluation(8192);
-    query_evaluation(32768);
+    query_evaluation(16384);
     // query_evaluation(16);
 }
