@@ -29,7 +29,12 @@ namespace HEDB
         for (int i = 0; i <= Lvl1::k * Lvl1::n; i++)
             res[i] = c_1[i] - res[i];
 
-        my_MSBGateBootstrapping(res,res,ek,result_type, 31-k);
+        const uint32_t plain_bits_eff =
+            (std::numeric_limits<Lvl1::T>::digits > k + 1)
+                ? (std::numeric_limits<Lvl1::T>::digits - k - 1)
+                : 1;
+        my_MSBGateBootstrapping(res, res, ek, result_type, 31 - k,
+                                plain_bits_eff, true);
     }
 
     // void my_HomAND(TLWELvl1 &res, const TLWELvl1 &ca, const TLWELvl1 &cb,  const TFHEEvalKey &ek, bool result_type, uint32_t k)

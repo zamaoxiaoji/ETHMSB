@@ -39,7 +39,8 @@ namespace HEDB
         if(plain_bits <= 4){
             if constexpr (std::is_same_v<P, TFHEpp::lvl1param>) {
                 
-                my_MSBGateBootstrapping(res, sub_tlwe, ek, result_type, (31-k));  //my_MSBGateBootstrapping  in  src/comparison/tfhepp_utils.cpp
+                my_MSBGateBootstrapping(res, sub_tlwe, ek, result_type, (31-k),
+                                        plain_bits + 1, true);  //my_MSBGateBootstrapping  in  src/comparison/tfhepp_utils.cpp
             }
             else{
                 HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
@@ -138,7 +139,8 @@ namespace HEDB
         if(plain_bits <= 4){
             if constexpr (std::is_same_v<P, TFHEpp::lvl1param>) {
                 
-                my_MSBGateBootstrapping(res, sub_tlwe, ek, result_type, (31-k));  //my_MSBGateBootstrapping  in  src/comparison/tfhepp_utils.cpp
+                my_MSBGateBootstrapping(res, sub_tlwe, ek, result_type, (31-k),
+                                        plain_bits + 1, true);  //my_MSBGateBootstrapping  in  src/comparison/tfhepp_utils.cpp
             }
             else{
                 HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
@@ -218,7 +220,8 @@ namespace HEDB
         if(plain_bits <= 4){
             if constexpr (std::is_same_v<P, TFHEpp::lvl1param>) {
                 
-                my_MSBGateBootstrapping(res, sub_tlwe, ek, result_type, (31-k));  //my_MSBGateBootstrapping  in  src/comparison/tfhepp_utils.cpp
+                my_MSBGateBootstrapping(res, sub_tlwe, ek, result_type, (31-k),
+                                        plain_bits + 1, true);  //my_MSBGateBootstrapping  in  src/comparison/tfhepp_utils.cpp
             }
             else{
                 HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
@@ -297,7 +300,8 @@ namespace HEDB
         if(plain_bits <= 4){
             if constexpr (std::is_same_v<P, TFHEpp::lvl1param>) {
                 
-                my_MSBGateBootstrapping(res, sub_tlwe, ek, result_type, (31-k));  //my_MSBGateBootstrapping  in  src/comparison/tfhepp_utils.cpp
+                my_MSBGateBootstrapping(res, sub_tlwe, ek, result_type, (31-k),
+                                        plain_bits + 1, true);  //my_MSBGateBootstrapping  in  src/comparison/tfhepp_utils.cpp
             }
             else{
                 HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
@@ -389,7 +393,8 @@ namespace HEDB
         if(plain_bits <= 4){
             if constexpr (std::is_same_v<P, TFHEpp::lvl1param>) {
                 
-                my_MSBGateBootstrapping(res, sub_tlwe, ek, result_type, (31-k));  //my_MSBGateBootstrapping  in  src/comparison/tfhepp_utils.cpp
+                my_MSBGateBootstrapping(res, sub_tlwe, ek, result_type, (31-k),
+                                        plain_bits + 1, true);  //my_MSBGateBootstrapping  in  src/comparison/tfhepp_utils.cpp
             }
             else{
                 HomMSB(res, sub_tlwe, plain_bits + 1, ek, result_type);
