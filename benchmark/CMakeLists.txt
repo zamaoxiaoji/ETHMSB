@@ -11,3 +11,8 @@ add_executable(bench_fft bench_fft.cpp)
 target_include_directories(
   bench_fft PUBLIC ${PROJECT_SOURCE_DIR}/thirdparties/cereal/include)
 target_link_libraries(bench_fft benchmark::benchmark tfhe++)
+
+add_executable(ethmsb_bench ethmsb_bench.cpp)
+target_include_directories(
+  ethmsb_bench PUBLIC ${PROJECT_SOURCE_DIR}/thirdparties/cereal/include)
+target_link_libraries(ethmsb_bench tfhe++)

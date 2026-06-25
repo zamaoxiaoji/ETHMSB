@@ -6,6 +6,7 @@
 #include "tfhe/cloudkey.hpp"
 #include "tfhe/cmuxmem.hpp"
 #include "tfhe/detwfa.hpp"
+#include "tfhe/ethmsb.hpp"
 #include "tfhe/externs/cloudkey.hpp"
 #include "tfhe/externs/detwfa.hpp"
 #include "tfhe/externs/key.hpp"
