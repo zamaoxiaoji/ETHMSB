@@ -89,6 +89,7 @@ option(USE_HEXL "Use Intel HEXL" OFF)
 
 option(ENABLE_TEST "Build tests" OFF)
 option(ENABLE_BENCHMARK "Build benchmarks" OFF)
+option(ENABLE_ETHMSB_STRESS "Build ETHMSB correctness stress runner" OFF)
 option(ENABLE_TUTORIAL "Build tutorial" OFF)
 option(USE_PERF "Use Google Profiler" OFF)
 
@@ -248,6 +249,13 @@ if(USE_RANDEN)
   add_subdirectory(thirdparties/randen)
 endif()
 add_subdirectory(src)
+
+if(ENABLE_ETHMSB_STRESS)
+  add_executable(ethmsb_correctness benchmark/ethmsb_correctness.cpp)
+  target_include_directories(
+    ethmsb_correctness PUBLIC ${PROJECT_SOURCE_DIR}/thirdparties/cereal/include)
+  target_link_libraries(ethmsb_correctness tfhe++)
+endif()
 
 if(ENABLE_TEST)
   add_subdirectory(test)

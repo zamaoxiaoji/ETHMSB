@@ -1,0 +1,23 @@
+add_executable(comparison_test comparison_test.cpp)
+target_link_libraries(comparison_test HEDB)
+
+add_executable(conversion_test conversion_test.cpp)
+target_link_libraries(conversion_test HEDB)
+
+add_executable(tpch_q6 tpch_q6.cpp)
+target_link_libraries(tpch_q6 HEDB)
+
+add_executable(tpch_q6_ethmsb tpch_q6_ethmsb.cpp)
+target_link_libraries(tpch_q6_ethmsb HEDB)
+
+add_executable(tpch_q14_ethmsb tpch_q14_ethmsb.cpp)
+target_link_libraries(tpch_q14_ethmsb HEDB)
+
+add_executable(tpch_q6_he3db_omp tpch_q6_he3db_omp.cpp)
+target_link_libraries(tpch_q6_he3db_omp HEDB)
+
+add_executable(tpch_q14_he3db_omp tpch_q14_he3db_omp.cpp)
+target_link_libraries(tpch_q14_he3db_omp HEDB)
+
+add_executable(msb_bit_timing_single_core msb_bit_timing_single_core.cpp)
+target_link_libraries(msb_bit_timing_single_core HEDB)

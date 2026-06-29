@@ -1,0 +1,2 @@
+mode,bit,operand_bits,full_bits,input_level,result_type,trials,failures,correct_rate,first_failure_index,first_lhs,first_rhs,first_value,first_expected,first_actual,seed,threads,chunk_size,elapsed_seconds,trials_per_second,parameter_header,tfhepp_commit,compiler,compile_flags
+MSB,33,32,33,Lvl2,LOGIC,1024,0,1,NA,NA,NA,NA,NA,NA,123,96,16,6.08848,168.186,params/128bit.hpp,c17ada357687b3917778bd080cf6cc20ce61e7d1,"11.4.0","Release USE_AVX512=OFF USE_SPQLIOS_INTL=ON"

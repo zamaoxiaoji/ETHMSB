@@ -1,0 +1,5 @@
+mode,bit,operand_bits,full_bits,input_level,result_type,trials,failures,correct_rate,first_failure_index,first_lhs,first_rhs,first_value,first_expected,first_actual,seed,threads,chunk_size,elapsed_seconds,trials_per_second,parameter_header,tfhepp_commit,compiler,compile_flags
+MSB,6,5,6,Lvl1,LOGIC,8,0,1,NA,NA,NA,NA,NA,NA,123,2,16,0.159105,50.2813,params/128bit.hpp,c17ada357687b3917778bd080cf6cc20ce61e7d1,"11.4.0","Release USE_AVX512=OFF USE_SPQLIOS_INTL=ON"
+MSB,6,5,6,Lvl1,ARITHMETIC,8,0,1,NA,NA,NA,NA,NA,NA,123,2,16,0.150207,53.26,params/128bit.hpp,c17ada357687b3917778bd080cf6cc20ce61e7d1,"11.4.0","Release USE_AVX512=OFF USE_SPQLIOS_INTL=ON"
+MSB,7,6,7,Lvl1,LOGIC,8,0,1,NA,NA,NA,NA,NA,NA,123,2,16,0.149694,53.4422,params/128bit.hpp,c17ada357687b3917778bd080cf6cc20ce61e7d1,"11.4.0","Release USE_AVX512=OFF USE_SPQLIOS_INTL=ON"
+MSB,7,6,7,Lvl1,ARITHMETIC,8,0,1,NA,NA,NA,NA,NA,NA,123,2,16,0.149699,53.4407,params/128bit.hpp,c17ada357687b3917778bd080cf6cc20ce61e7d1,"11.4.0","Release USE_AVX512=OFF USE_SPQLIOS_INTL=ON"

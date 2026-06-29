@@ -1,0 +1,27 @@
+Relational SQL Query14 ETHMSB Test: 
+--------------------------------------------------------
+Records: 256
+Threads: 96
+Filtering Time: 2223 ms
+Filtering finish
+Aggregation :
+Generating Parameters...
+Generating Conversion Key...
+Starting Conversion...
+Repack average error = 0.000000 ~ 2^-23.5
+Repack average error = 0.000000 ~ 2^-26.0
+Aggregating price and discount ..
+Remian modulus: 2
+Aggregation Time: 65509 ms
+Query Evaluation Time: 67732 ms
+Encrypted query result: 
+promo_revenue
+    0.273423
+Plain query result: 
+promo_revenue
+    0.273423
+
+
+
+
+Wall Time: 152.89 s

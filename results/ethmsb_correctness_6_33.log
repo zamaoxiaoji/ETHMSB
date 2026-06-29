@@ -1,0 +1,243 @@
+Thu Jun 25 13:01:57 CST 2026
+ETHMSB correctness stress runner
+mode=MSB bits=6..33 trials=1048576 seed=123 threads=96
+parameter_header=params/128bit.hpp
+compile_flags=Release USE_AVX512=OFF USE_SPQLIOS_INTL=ON
+Starting MSB bit=6 LOGIC trials=1048576 threads=96
+MSB bit=6 LOGIC progress=65536/1048576 failures_so_far=0
+MSB bit=6 LOGIC progress=131072/1048576 failures_so_far=0
+MSB bit=6 LOGIC progress=196608/1048576 failures_so_far=0
+MSB bit=6 LOGIC progress=262144/1048576 failures_so_far=0
+MSB bit=6 LOGIC progress=327680/1048576 failures_so_far=0
+MSB bit=6 LOGIC progress=393216/1048576 failures_so_far=0
+MSB bit=6 LOGIC progress=458752/1048576 failures_so_far=0
+MSB bit=6 LOGIC progress=524288/1048576 failures_so_far=0
+MSB bit=6 LOGIC progress=589824/1048576 failures_so_far=0
+MSB bit=6 LOGIC progress=655360/1048576 failures_so_far=0
+MSB bit=6 LOGIC progress=720896/1048576 failures_so_far=0
+MSB bit=6 LOGIC progress=786432/1048576 failures_so_far=0
+MSB bit=6 LOGIC progress=851968/1048576 failures_so_far=0
+MSB bit=6 LOGIC progress=917504/1048576 failures_so_far=0
+MSB bit=6 LOGIC progress=983040/1048576 failures_so_far=0
+MSB bit=6 LOGIC progress=1048576/1048576 failures_so_far=0
+MSB bit=6 LOGIC failures=0/1048576 correct_rate=1 elapsed_s=422.061
+Starting MSB bit=6 ARITHMETIC trials=1048576 threads=96
+MSB bit=6 ARITHMETIC progress=65536/1048576 failures_so_far=0
+MSB bit=6 ARITHMETIC progress=131072/1048576 failures_so_far=0
+MSB bit=6 ARITHMETIC progress=196608/1048576 failures_so_far=0
+MSB bit=6 ARITHMETIC progress=262144/1048576 failures_so_far=0
+MSB bit=6 ARITHMETIC progress=327680/1048576 failures_so_far=0
+MSB bit=6 ARITHMETIC progress=393216/1048576 failures_so_far=0
+MSB bit=6 ARITHMETIC progress=458752/1048576 failures_so_far=0
+MSB bit=6 ARITHMETIC progress=524288/1048576 failures_so_far=0
+MSB bit=6 ARITHMETIC progress=589824/1048576 failures_so_far=0
+MSB bit=6 ARITHMETIC progress=655360/1048576 failures_so_far=0
+MSB bit=6 ARITHMETIC progress=720896/1048576 failures_so_far=0
+MSB bit=6 ARITHMETIC progress=786432/1048576 failures_so_far=0
+MSB bit=6 ARITHMETIC progress=851968/1048576 failures_so_far=0
+MSB bit=6 ARITHMETIC progress=917504/1048576 failures_so_far=0
+MSB bit=6 ARITHMETIC progress=983040/1048576 failures_so_far=0
+MSB bit=6 ARITHMETIC progress=1048576/1048576 failures_so_far=0
+MSB bit=6 ARITHMETIC failures=0/1048576 correct_rate=1 elapsed_s=423.214
+Starting MSB bit=7 LOGIC trials=1048576 threads=96
+MSB bit=7 LOGIC progress=65536/1048576 failures_so_far=0
+MSB bit=7 LOGIC progress=131072/1048576 failures_so_far=0
+MSB bit=7 LOGIC progress=196608/1048576 failures_so_far=0
+MSB bit=7 LOGIC progress=262144/1048576 failures_so_far=0
+MSB bit=7 LOGIC progress=327680/1048576 failures_so_far=0
+MSB bit=7 LOGIC progress=393216/1048576 failures_so_far=0
+MSB bit=7 LOGIC progress=458752/1048576 failures_so_far=0
+MSB bit=7 LOGIC progress=524288/1048576 failures_so_far=0
+MSB bit=7 LOGIC progress=589824/1048576 failures_so_far=0
+MSB bit=7 LOGIC progress=655360/1048576 failures_so_far=0
+MSB bit=7 LOGIC progress=720896/1048576 failures_so_far=0
+MSB bit=7 LOGIC progress=786432/1048576 failures_so_far=0
+MSB bit=7 LOGIC progress=851968/1048576 failures_so_far=0
+MSB bit=7 LOGIC progress=917504/1048576 failures_so_far=0
+MSB bit=7 LOGIC progress=983040/1048576 failures_so_far=0
+MSB bit=7 LOGIC progress=1048576/1048576 failures_so_far=0
+MSB bit=7 LOGIC failures=0/1048576 correct_rate=1 elapsed_s=432.58
+Starting MSB bit=7 ARITHMETIC trials=1048576 threads=96
+MSB bit=7 ARITHMETIC progress=65536/1048576 failures_so_far=0
+MSB bit=7 ARITHMETIC progress=131072/1048576 failures_so_far=0
+MSB bit=7 ARITHMETIC progress=196608/1048576 failures_so_far=0
+MSB bit=7 ARITHMETIC progress=262144/1048576 failures_so_far=0
+MSB bit=7 ARITHMETIC progress=327680/1048576 failures_so_far=0
+MSB bit=7 ARITHMETIC progress=393216/1048576 failures_so_far=0
+MSB bit=7 ARITHMETIC progress=458752/1048576 failures_so_far=0
+MSB bit=7 ARITHMETIC progress=524288/1048576 failures_so_far=0
+MSB bit=7 ARITHMETIC progress=589824/1048576 failures_so_far=0
+MSB bit=7 ARITHMETIC progress=655360/1048576 failures_so_far=0
+MSB bit=7 ARITHMETIC progress=720896/1048576 failures_so_far=0
+MSB bit=7 ARITHMETIC progress=786432/1048576 failures_so_far=0
+MSB bit=7 ARITHMETIC progress=851968/1048576 failures_so_far=0
+MSB bit=7 ARITHMETIC progress=917504/1048576 failures_so_far=0
+MSB bit=7 ARITHMETIC progress=983040/1048576 failures_so_far=0
+MSB bit=7 ARITHMETIC progress=1048576/1048576 failures_so_far=0
+MSB bit=7 ARITHMETIC failures=0/1048576 correct_rate=1 elapsed_s=448.073
+Starting MSB bit=8 LOGIC trials=1048576 threads=96
+MSB bit=8 LOGIC progress=65536/1048576 failures_so_far=0
+MSB bit=8 LOGIC progress=131072/1048576 failures_so_far=0
+MSB bit=8 LOGIC progress=196608/1048576 failures_so_far=0
+MSB bit=8 LOGIC progress=262144/1048576 failures_so_far=0
+MSB bit=8 LOGIC progress=327680/1048576 failures_so_far=0
+MSB bit=8 LOGIC progress=393216/1048576 failures_so_far=0
+MSB bit=8 LOGIC progress=458752/1048576 failures_so_far=0
+MSB bit=8 LOGIC progress=524288/1048576 failures_so_far=0
+MSB bit=8 LOGIC progress=589824/1048576 failures_so_far=0
+MSB bit=8 LOGIC progress=655360/1048576 failures_so_far=0
+MSB bit=8 LOGIC progress=720896/1048576 failures_so_far=0
+MSB bit=8 LOGIC progress=786432/1048576 failures_so_far=0
+MSB bit=8 LOGIC progress=851968/1048576 failures_so_far=0
+MSB bit=8 LOGIC progress=917504/1048576 failures_so_far=0
+MSB bit=8 LOGIC progress=983040/1048576 failures_so_far=0
+MSB bit=8 LOGIC progress=1048576/1048576 failures_so_far=0
+MSB bit=8 LOGIC failures=0/1048576 correct_rate=1 elapsed_s=510.784
+Starting MSB bit=8 ARITHMETIC trials=1048576 threads=96
+MSB bit=8 ARITHMETIC progress=65536/1048576 failures_so_far=0
+MSB bit=8 ARITHMETIC progress=131072/1048576 failures_so_far=0
+MSB bit=8 ARITHMETIC progress=196608/1048576 failures_so_far=0
+MSB bit=8 ARITHMETIC progress=262144/1048576 failures_so_far=0
+MSB bit=8 ARITHMETIC progress=327680/1048576 failures_so_far=0
+MSB bit=8 ARITHMETIC progress=393216/1048576 failures_so_far=0
+MSB bit=8 ARITHMETIC progress=458752/1048576 failures_so_far=0
+MSB bit=8 ARITHMETIC progress=524288/1048576 failures_so_far=0
+MSB bit=8 ARITHMETIC progress=589824/1048576 failures_so_far=0
+MSB bit=8 ARITHMETIC progress=655360/1048576 failures_so_far=0
+MSB bit=8 ARITHMETIC progress=720896/1048576 failures_so_far=0
+MSB bit=8 ARITHMETIC progress=786432/1048576 failures_so_far=0
+MSB bit=8 ARITHMETIC progress=851968/1048576 failures_so_far=0
+MSB bit=8 ARITHMETIC progress=917504/1048576 failures_so_far=0
+MSB bit=8 ARITHMETIC progress=983040/1048576 failures_so_far=0
+MSB bit=8 ARITHMETIC progress=1048576/1048576 failures_so_far=0
+MSB bit=8 ARITHMETIC failures=0/1048576 correct_rate=1 elapsed_s=435.744
+Starting MSB bit=9 LOGIC trials=1048576 threads=96
+MSB bit=9 LOGIC progress=65536/1048576 failures_so_far=0
+MSB bit=9 LOGIC progress=131072/1048576 failures_so_far=0
+MSB bit=9 LOGIC progress=196608/1048576 failures_so_far=0
+MSB bit=9 LOGIC progress=262144/1048576 failures_so_far=0
+MSB bit=9 LOGIC progress=327680/1048576 failures_so_far=0
+MSB bit=9 LOGIC progress=393216/1048576 failures_so_far=0
+MSB bit=9 LOGIC progress=458752/1048576 failures_so_far=0
+MSB bit=9 LOGIC progress=524288/1048576 failures_so_far=0
+MSB bit=9 LOGIC progress=589824/1048576 failures_so_far=0
+MSB bit=9 LOGIC progress=655360/1048576 failures_so_far=0
+MSB bit=9 LOGIC progress=720896/1048576 failures_so_far=0
+MSB bit=9 LOGIC progress=786432/1048576 failures_so_far=0
+MSB bit=9 LOGIC progress=851968/1048576 failures_so_far=0
+MSB bit=9 LOGIC progress=917504/1048576 failures_so_far=0
+MSB bit=9 LOGIC progress=983040/1048576 failures_so_far=0
+MSB bit=9 LOGIC progress=1048576/1048576 failures_so_far=0
+MSB bit=9 LOGIC failures=0/1048576 correct_rate=1 elapsed_s=569.551
+Starting MSB bit=9 ARITHMETIC trials=1048576 threads=96
+MSB bit=9 ARITHMETIC progress=65536/1048576 failures_so_far=0
+MSB bit=9 ARITHMETIC progress=131072/1048576 failures_so_far=0
+MSB bit=9 ARITHMETIC progress=196608/1048576 failures_so_far=0
+MSB bit=9 ARITHMETIC progress=262144/1048576 failures_so_far=0
+MSB bit=9 ARITHMETIC progress=327680/1048576 failures_so_far=0
+MSB bit=9 ARITHMETIC progress=393216/1048576 failures_so_far=0
+MSB bit=9 ARITHMETIC progress=458752/1048576 failures_so_far=0
+MSB bit=9 ARITHMETIC progress=524288/1048576 failures_so_far=0
+MSB bit=9 ARITHMETIC progress=589824/1048576 failures_so_far=0
+MSB bit=9 ARITHMETIC progress=655360/1048576 failures_so_far=0
+MSB bit=9 ARITHMETIC progress=720896/1048576 failures_so_far=0
+MSB bit=9 ARITHMETIC progress=786432/1048576 failures_so_far=0
+MSB bit=9 ARITHMETIC progress=851968/1048576 failures_so_far=0
+MSB bit=9 ARITHMETIC progress=917504/1048576 failures_so_far=0
+MSB bit=9 ARITHMETIC progress=983040/1048576 failures_so_far=0
+MSB bit=9 ARITHMETIC progress=1048576/1048576 failures_so_far=0
+MSB bit=9 ARITHMETIC failures=0/1048576 correct_rate=1 elapsed_s=974.772
+Starting MSB bit=10 LOGIC trials=1048576 threads=96
+MSB bit=10 LOGIC progress=65536/1048576 failures_so_far=0
+MSB bit=10 LOGIC progress=131072/1048576 failures_so_far=0
+MSB bit=10 LOGIC progress=196608/1048576 failures_so_far=0
+MSB bit=10 LOGIC progress=262144/1048576 failures_so_far=0
+MSB bit=10 LOGIC progress=327680/1048576 failures_so_far=0
+MSB bit=10 LOGIC progress=393216/1048576 failures_so_far=0
+MSB bit=10 LOGIC progress=458752/1048576 failures_so_far=0
+MSB bit=10 LOGIC progress=524288/1048576 failures_so_far=0
+MSB bit=10 LOGIC progress=589824/1048576 failures_so_far=0
+MSB bit=10 LOGIC progress=655360/1048576 failures_so_far=0
+MSB bit=10 LOGIC progress=720896/1048576 failures_so_far=0
+MSB bit=10 LOGIC progress=786432/1048576 failures_so_far=0
+MSB bit=10 LOGIC progress=851968/1048576 failures_so_far=0
+MSB bit=10 LOGIC progress=917504/1048576 failures_so_far=0
+MSB bit=10 LOGIC progress=983040/1048576 failures_so_far=0
+MSB bit=10 LOGIC progress=1048576/1048576 failures_so_far=0
+MSB bit=10 LOGIC failures=0/1048576 correct_rate=1 elapsed_s=559.04
+Starting MSB bit=10 ARITHMETIC trials=1048576 threads=96
+MSB bit=10 ARITHMETIC progress=65536/1048576 failures_so_far=0
+MSB bit=10 ARITHMETIC progress=131072/1048576 failures_so_far=0
+MSB bit=10 ARITHMETIC progress=196608/1048576 failures_so_far=0
+MSB bit=10 ARITHMETIC progress=262144/1048576 failures_so_far=0
+MSB bit=10 ARITHMETIC progress=327680/1048576 failures_so_far=0
+MSB bit=10 ARITHMETIC progress=393216/1048576 failures_so_far=0
+MSB bit=10 ARITHMETIC progress=458752/1048576 failures_so_far=0
+MSB bit=10 ARITHMETIC progress=524288/1048576 failures_so_far=0
+MSB bit=10 ARITHMETIC progress=589824/1048576 failures_so_far=1
+MSB bit=10 ARITHMETIC progress=655360/1048576 failures_so_far=1
+MSB bit=10 ARITHMETIC progress=720896/1048576 failures_so_far=1
+MSB bit=10 ARITHMETIC progress=786432/1048576 failures_so_far=1
+MSB bit=10 ARITHMETIC progress=851968/1048576 failures_so_far=1
+MSB bit=10 ARITHMETIC progress=917504/1048576 failures_so_far=1
+MSB bit=10 ARITHMETIC progress=983040/1048576 failures_so_far=1
+MSB bit=10 ARITHMETIC progress=1048576/1048576 failures_so_far=1
+MSB bit=10 ARITHMETIC failures=1/1048576 correct_rate=0.99999904632568359 elapsed_s=678.134
+Starting MSB bit=11 LOGIC trials=1048576 threads=96
+MSB bit=11 LOGIC progress=65536/1048576 failures_so_far=0
+MSB bit=11 LOGIC progress=131072/1048576 failures_so_far=0
+MSB bit=11 LOGIC progress=196608/1048576 failures_so_far=0
+MSB bit=11 LOGIC progress=262144/1048576 failures_so_far=0
+MSB bit=11 LOGIC progress=327680/1048576 failures_so_far=0
+MSB bit=11 LOGIC progress=393216/1048576 failures_so_far=0
+MSB bit=11 LOGIC progress=458752/1048576 failures_so_far=0
+MSB bit=11 LOGIC progress=524288/1048576 failures_so_far=0
+MSB bit=11 LOGIC progress=589824/1048576 failures_so_far=0
+MSB bit=11 LOGIC progress=655360/1048576 failures_so_far=0
+MSB bit=11 LOGIC progress=720896/1048576 failures_so_far=0
+MSB bit=11 LOGIC progress=786432/1048576 failures_so_far=0
+MSB bit=11 LOGIC progress=851968/1048576 failures_so_far=0
+MSB bit=11 LOGIC progress=917504/1048576 failures_so_far=0
+MSB bit=11 LOGIC progress=983040/1048576 failures_so_far=0
+MSB bit=11 LOGIC progress=1048576/1048576 failures_so_far=0
+MSB bit=11 LOGIC failures=0/1048576 correct_rate=1 elapsed_s=1725.67
+Starting MSB bit=11 ARITHMETIC trials=1048576 threads=96
+MSB bit=11 ARITHMETIC progress=65536/1048576 failures_so_far=0
+MSB bit=11 ARITHMETIC progress=131072/1048576 failures_so_far=0
+MSB bit=11 ARITHMETIC progress=196608/1048576 failures_so_far=0
+MSB bit=11 ARITHMETIC progress=262144/1048576 failures_so_far=0
+MSB bit=11 ARITHMETIC progress=327680/1048576 failures_so_far=0
+MSB bit=11 ARITHMETIC progress=393216/1048576 failures_so_far=0
+MSB bit=11 ARITHMETIC progress=458752/1048576 failures_so_far=0
+MSB bit=11 ARITHMETIC progress=524288/1048576 failures_so_far=0
+MSB bit=11 ARITHMETIC progress=589824/1048576 failures_so_far=0
+MSB bit=11 ARITHMETIC progress=655360/1048576 failures_so_far=0
+MSB bit=11 ARITHMETIC progress=720896/1048576 failures_so_far=0
+MSB bit=11 ARITHMETIC progress=786432/1048576 failures_so_far=0
+MSB bit=11 ARITHMETIC progress=851968/1048576 failures_so_far=0
+MSB bit=11 ARITHMETIC progress=917504/1048576 failures_so_far=0
+MSB bit=11 ARITHMETIC progress=983040/1048576 failures_so_far=0
+MSB bit=11 ARITHMETIC progress=1048576/1048576 failures_so_far=0
+MSB bit=11 ARITHMETIC failures=0/1048576 correct_rate=1 elapsed_s=1644.5
+Starting MSB bit=12 LOGIC trials=1048576 threads=96
+MSB bit=12 LOGIC progress=65536/1048576 failures_so_far=0
+MSB bit=12 LOGIC progress=131072/1048576 failures_so_far=0
+MSB bit=12 LOGIC progress=196608/1048576 failures_so_far=0
+MSB bit=12 LOGIC progress=262144/1048576 failures_so_far=0
+MSB bit=12 LOGIC progress=327680/1048576 failures_so_far=0
+MSB bit=12 LOGIC progress=393216/1048576 failures_so_far=0
+MSB bit=12 LOGIC progress=458752/1048576 failures_so_far=0
+MSB bit=12 LOGIC progress=524288/1048576 failures_so_far=0
+MSB bit=12 LOGIC progress=589824/1048576 failures_so_far=0
+MSB bit=12 LOGIC progress=655360/1048576 failures_so_far=0
+MSB bit=12 LOGIC progress=720896/1048576 failures_so_far=0
+MSB bit=12 LOGIC progress=786432/1048576 failures_so_far=0
+MSB bit=12 LOGIC progress=851968/1048576 failures_so_far=0
+MSB bit=12 LOGIC progress=917504/1048576 failures_so_far=0
+MSB bit=12 LOGIC progress=983040/1048576 failures_so_far=0
+MSB bit=12 LOGIC progress=1048576/1048576 failures_so_far=0
+MSB bit=12 LOGIC failures=0/1048576 correct_rate=1 elapsed_s=2124.95
+Starting MSB bit=12 ARITHMETIC trials=1048576 threads=96
+MSB bit=12 ARITHMETIC progress=65536/1048576 failures_so_far=0
+MSB bit=12 ARITHMETIC progress=131072/1048576 failures_so_far=0
+MSB bit=12 ARITHMETIC progress=196608/1048576 failures_so_far=0
